@@ -14,7 +14,13 @@
     />
   </head>
   <body>
-    <header></header>
+    <header>
+      <div class="h-start">
+      <h4> Explore </h4>
+      <h4> Create  </h4>
+    </div>
+      <button class="signin"> Sign in </button>
+    </header>
     <section class="hero">
       <h1>Discover Creativity</h1>
       <h3>
@@ -251,7 +257,7 @@
           </svg>
         </div>
         <div class="small-square">
-          <button>
+          <button class="subscribe">
             <p>Subscribe</p>
             <svg
               stroke-width="4"
@@ -319,7 +325,15 @@
           </div>
         </div>
         <div class="small-square">
-
+          <div class="cube-loader">
+            <div class="cube-top"></div>
+            <div class="cube-wrapper">
+              <span style="--i:0" class="cube-span"></span>
+              <span style="--i:1" class="cube-span"></span>
+              <span style="--i:2" class="cube-span"></span>
+              <span style="--i:3" class="cube-span"></span>
+            </div>
+          </div>
         </div>
       </div>
       <div class="line second">
@@ -328,38 +342,19 @@
                 Check
             </button>
         </div>
-        <div class="small-square"></div>
         <div class="small-square">
-          <div class="radio-input">
-            <input
-              value="value-1"
-              name="value-radio"
-              id="value-1"
-              type="radio"
-            />
-            <div class="plus1">
-              <div class="plus2"></div>
-            </div>
-            <input
-              value="value-2"
-              name="value-radio"
-              id="value-2"
-              type="radio"
-              checked=""
-            />
-            <div class="plus1">
-              <div class="plus2"></div>
-            </div>
-            <input
-              value="value-3"
-              name="value-radio"
-              id="value-3"
-              type="radio"
-            />
-            <div class="plus1">
-              <div class="plus2"></div>
-            </div>
-          </div>
+          <button data-label="Register" class="rainbow-hover">
+            <span class="sp">Register</span>
+          </button>          
+        </div>
+        <div class="small-square">
+          <button class="stack">
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span>Button</span>
+          </button>
         </div>
         <div class="small-square">
           <div class="radio-input-circle">
@@ -559,5 +554,10 @@
         </div>
       </div>
     </section>
+    <div class="last-button">
+    <button class="explore">
+      Explore more
+     </button>
+    </div>
   </body>
 </html>
