@@ -16,7 +16,7 @@
   <body>
     <header>
       <div class="h-start">
-      <h4> Explore </h4>
+      <h4 > Explore </h4>
       <h4> Create  </h4>
     </div>
       <button class="signin"> Sign in </button>
@@ -554,10 +554,15 @@
         </div>
       </div>
     </section>
-    <div class="last-button">
+    <div class="last-button" onclick="newpage()">
     <button class="explore">
       Explore more
      </button>
+     <script>
+        function newpage(){
+          location.href = "http://127.0.0.1:5500/Element-loader-page.html"
+        }
+     </script>
     </div>
   </body>
 </html>
