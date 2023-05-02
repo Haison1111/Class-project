@@ -42,6 +42,7 @@ header{
   color: white;
   font-family: 'Quicksand', sans-serif;
   transition: 1s ease-in;
+  border: none;
   }
   button.signin:hover{
     cursor: pointer;
@@ -91,6 +92,7 @@ section.showcase.loader {
     position: relative;;
     
 }
+
 aside.element-picks {
     /* font-size: 24px; */
     color: white;
@@ -197,11 +199,15 @@ div#signInField a{
     gap: 18px;
     margin: 16px auto;
 }
-h3{
+.Element{
+   font-family: 'Quicksand', sans-serif;
     font-size: 32px;
+    font-weight: 700;
+    color: white;
+    text-decoration: none;
 }
 
-h3:hover{
+.Element:hover{
     background-color: #5ae0ff;
     background-image: linear-gradient(115deg, #5ae0ff 0%, #b61eff 52%, #71d2aa 90%);
     -webkit-background-clip: text;
@@ -211,6 +217,29 @@ h3:hover{
     font-size: 34px;
     cursor: pointer;
 }
+
+.active{
+  background-color: #5ae0ff;
+   background-image: linear-gradient(115deg, #5ae0ff 0%, #b61eff 52%, #71d2aa 90%);
+   color: transparent;
+   -webkit-background-clip: text;
+  font-size: 36px;
+  font-weight: 700;
+  text-decoration: none;
+}
+
+
+
+
+
+/* ---------------------------------------------------------------------------------------------------
+                                                   het form */
+
+
+
+
+
+
 /* loader compass */
 .pl {
     display: block;
@@ -1374,6 +1403,12 @@ h3:hover{
     }
   }
 
+
+
+
+  /* yeu cau copy vao tat ca cac trang */
+
+  
   @keyframes apeared {
     from {
       top: -50%

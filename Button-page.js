@@ -4,14 +4,34 @@ const SmallSquare = [
     }
 ]
 
-const ButtonShowcase = document.getElementsByClassName("showcase-button")
+const NavElements = document.getElementsByClassName('Element')
+const windowPathName = window.location.pathname;
+
+
+for ( let i = 0; i< 5;i++){
+    if ( NavElements[i].href.includes(windowPathName)){
+        NavElements[i].classList.replace("Element","active")
+    }
+}
+
+
+
+
+
+
+// NavElements.forEach(NavElement => {
+//     if (NavElement.href.includes(windowPathName)){
+//         NavElement.classList.add("active")
+//     }
+// });
+
+
 
 function signInForm(){
     //  document.getElementsByClass("button showcase").style.animation = "disapear 1s"
      document.getElementById("signInField").style.animation= "apeared 0.75s"
      document.getElementById("signInField").style.visibility="visible";
      document.getElementById("darken-element").style.display = "block "
-     document.getElementById("darken-element").blur() 
 }
 
 function turnoffFeild(){
@@ -20,9 +40,5 @@ function turnoffFeild(){
     document.getElementById("darken-element").style.display = "none"
 }
 
-function gotoloader(){
-    location.href="http://127.0.0.1:5500/Element-loader-page.html"
-}
-function gotoButton(){
-    location.href="http://127.0.0.1:5500/Button-page.html"
-}
+
+

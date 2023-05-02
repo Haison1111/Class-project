@@ -12,6 +12,13 @@
       href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap"
       rel="stylesheet"
     />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+      integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
   </head>
   <body>
     <header>
@@ -19,8 +26,26 @@
       <h4 > Explore </h4>
       <h4> Create  </h4>
     </div>
-      <button class="signin"> Sign in </button>
+      <button class="signin" onclick="signInForm()"> Sign in </button>
     </header>
+    <div id="darken-element" onclick="turnoffFeild()">
+    </div>
+      <div id="signInField">
+        <div id="escape-btn" onclick="turnoffFeild()">
+            <i class="fa-solid fa-xmark" onclick="turnoffFeild()"></i>
+        </div>
+        <label for="email"> Email </label>
+        <input type="email" id="Email" placeholder="Email" />
+        <label for="password"> Password </label>
+        <input type="password" id="Password" placeholder="Password" />
+        <button class="Login-btn" type="submit">Sign in</button>
+        <div class="signUpField">
+          <div class="signUpLine">
+            <p>Don't have one ?</p>
+            <a href="" class="GoToSignUpField">Create one</a>
+          </div>
+        </div>
+      </div>
     <section class="hero">
       <h1>Discover Creativity</h1>
       <h3>
@@ -554,14 +579,11 @@
         </div>
       </div>
     </section>
-    <div class="last-button" onclick="newpage()">
+    <div class="last-button" onclick="gotoButton()">
     <button class="explore">
       Explore more
      </button>
-     <script>
-        function newpage(){
-          location.href = "http://127.0.0.1:5500/Element-loader-page.html"
-        }
+     <script src="./Button-page.js">
      </script>
     </div>
   </body>
