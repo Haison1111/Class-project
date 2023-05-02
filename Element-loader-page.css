@@ -88,6 +88,7 @@ section.showcase.loader {
     display: flex;
     margin: 32px auto;
     width: 100%;
+    position: relative;;
     
 }
 aside.element-picks {
@@ -99,6 +100,97 @@ aside.element-picks {
     margin-right: 24px ;
     position: sticky;
     top: 20px;
+}
+
+div#signInField {
+  position: absolute;
+  height: 500px;
+  width: 872px;
+  z-index: 7;
+  background: rgb(0, 0, 0);
+  left: 50%;
+  transform: translate(-50%, 0);
+  top: 76px;
+  border-radius: 16px;
+  padding: 32px 20px ;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 24px;
+  color: white;
+  font-family:'Quicksand', sans-serif ;
+  transition: 0.4s ease-in;
+  visibility: hidden;
+}
+
+
+.fa-solid{
+  color: white;
+  font-size: 32px;
+  /* background-color: white; */
+  margin-left: 768px;
+}
+
+.fa-solid:hover{
+  cursor: pointer;
+}
+label{
+  font-size: 28px;
+}
+input#Email{
+    padding: 16px 16px;
+    width: 426px;
+    border: none;
+    border-radius: 32px;
+}
+input#Password{
+  padding: 16px 16px;
+    width: 426px;
+    border: none;
+    border-radius: 32px;
+    margin-bottom: 16px;
+}
+
+button.Login-btn{
+  padding: 10px 36px;
+  font-size: 24px;
+  border-radius: 32px;
+  font-weight: 400;
+  background-color: #21D4FD;
+background-image: linear-gradient(19deg, #21D4FD 0%, #B721FF 100%);
+color: white;
+font-family: 'Quicksand', sans-serif;
+border: none;
+}
+button.Login-btn:hover{
+  cursor: pointer;
+}
+
+#darken-element{
+  position: fixed;
+  display: none;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0,0,0,0.75);
+  z-index: 6;
+  cursor: pointer;
+  transition: 1s;
+  filter: blur(-100%);
+  -webkit-filter: blur(-100%)
+}
+
+div#signInField p{
+  font-size: 18px;
+}
+div#signInField a{
+  text-align: center;
+  margin-left: 24px;
+  margin-top: 12px;
 }
 .line{
     display: flex;
@@ -1282,3 +1374,46 @@ h3:hover{
     }
   }
 
+  @keyframes apeared {
+    from {
+      top: -50%
+    };
+    0% {
+      opacity: 0%;
+    };
+
+    15% {
+      opacity: 15%;
+    }
+    25%{
+      opacity: 30%;
+    }
+    40%{
+      opacity: 40%;
+    }
+    50% {
+      opacity: 50%;
+    };
+    60%{
+      opacity: 60%;
+    }
+    75%{
+      opacity: 75%;
+    }
+    85%{
+      opacity: 85%;
+    }
+    100%{
+      opacity: 100%;
+    };
+  }
+
+  @keyframes disapear{
+    
+    from{
+      top: 76px;
+    }
+    to {
+      top: -50%;
+    }
+  }

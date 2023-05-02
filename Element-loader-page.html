@@ -6,6 +6,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Loader - page</title>
     <link rel="stylesheet" href="./Element-loader-page.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+      integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
   </head>
   <body>
     <header>
@@ -13,15 +20,33 @@
         <h4>Explore</h4>
         <h4>Create</h4>
       </div>
-      <button class="signin">Sign in</button>
+      <button class="signin" onclick="signInForm()">Sign in</button>
     </header>
     <section class="showcase loader">
+      <div id="darken-element" onclick="turnoffFeild()">
+      </div>
+        <div id="signInField">
+          <div id="escape-btn" onclick="turnoffFeild()">
+              <i class="fa-solid fa-xmark" onclick="turnoffFeild()"></i>
+          </div>
+          <label for="email"> Email </label>
+          <input type="email" id="Email" placeholder="Email" />
+          <label for="password"> Password </label>
+          <input type="password" id="Password" placeholder="Password" />
+          <button class="Login-btn" type="submit">Sign in</button>
+          <div class="signUpField">
+            <div class="signUpLine">
+              <p>Don't have one ?</p>
+              <a href="" class="GoToSignUpField">Create one</a>
+            </div>
+          </div>
+        </div>
       <div class="aside-wrapper">
       <aside class="element-picks">
         <h3>All</h3>
-        <h3>Button</h3>
+        <h3 onclick="gotoButton()">Button</h3>
         <h3>Checkboxes</h3>
-        <h3>Loader</h3>
+        <h3 onclick="gotoloader()">Loader</h3>
         <h3>Toggle switches</h3>
       </aside>
     </div>
@@ -404,6 +429,7 @@
                 </div>
             </div>
         </div>
+        <script src="./Button-page.js"></script>
       </section>
     </section>
   </body>
