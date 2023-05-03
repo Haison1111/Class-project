@@ -207,14 +207,22 @@ div#signInField a{
     margin: 16px auto;
 }
 
+.GoToSignUpField{
+  text-decoration: none;
+  color: rgb(212, 212, 212);
+  font-size: 16px;
+}
+
+
 .active{
   background-color: #5ae0ff;
    background-image: linear-gradient(115deg, #5ae0ff 0%, #b61eff 52%, #71d2aa 90%);
    color: transparent;
    -webkit-background-clip: text;
-  font-size: 36px;
+  font-size: 34px;
   font-weight: 700;
   text-decoration: none;
+  
 }
 .Element{
   font-family: 'Quicksand', sans-serif;
@@ -1433,3 +1441,6 @@ button.amongus {
       top: -50%;
     }
   }
+
+
+  
