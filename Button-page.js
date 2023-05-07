@@ -13,7 +13,7 @@ for ( let i = 0; i< 5;i++){
         NavElements[i].classList.replace("Element","active")
     }
 }
-
+var isClickNavMenu = false
 
 
 
@@ -40,5 +40,13 @@ function turnoffFeild(){
     document.getElementById("darken-element").style.display = "none"
 }
 
-
-
+function mobileMenuNav(){
+    isClickNavMenu = !isClickNavMenu
+    if(isClickNavMenu) {
+        document.getElementById("container").style.display="none"
+        document.getElementById("mobileNav").style.display="flex"
+    } else {
+        document.getElementById("container").style.display="block"
+        document.getElementById("mobileNav").style.display="none"
+    }
+}

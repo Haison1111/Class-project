@@ -1,65 +1,109 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Button-page</title>
-    <link rel="stylesheet" href="./Button-page.css" />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
-      integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
-      crossorigin="anonymous"
-      referrerpolicy="no-referrer"
-    />
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 
-  </head>
-  <body>
-    <header>
-      <div class="section-header">
-        <div class="h-start">
-          <h4>Explore</h4>
-          <h4>Create</h4>
-        </div>
-        <button class="signin" onclick="signInForm()">Sign in</button>
-        <button class="button button--secondary burger-button"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24"><path fill="none" d="M0 0h24v24H0z"></path><path fill="currentColor" d="M3 4h18v2H3V4zm0 7h18v2H3v-2zm0 7h18v2H3v-2z"></path></svg></button>
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Button-page</title>
+  <link rel="stylesheet" href="./Button-page.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap"
+    rel="stylesheet">
+
+</head>
+
+<body>
+  <header>
+    <div class="section-header">
+      <div class="h-start">
+        <h4>Explore</h4>
+        <h4>Create</h4>
       </div>
-      
-    </header>
-    <section class="showcase-button">
-      <div id="darken-element" onclick="turnoffFeild()">
+      <button class="signin" onclick="signInForm()">Sign in</button>
+      <button class="button button--secondary burger-button" onclick="mobileMenuNav()"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"
+          width="24" height="24">
+          <path fill="none" d="M0 0h24v24H0z"></path>
+          <path fill="currentColor" d="M3 4h18v2H3V4zm0 7h18v2H3v-2zm0 7h18v2H3v-2z"></path>
+        </svg></button>
     </div>
-      <div id="signInField">
-        <div id="escape-btn" onclick="turnoffFeild()">
-            <i class="fa-solid fa-xmark" onclick="turnoffFeild()"></i>
-        </div>
-        <label for="email"> Email </label>
-        <input type="email" id="Email" placeholder="Email" />
-        <label for="password"> Password </label>
-        <input type="password" id="Password" placeholder="Password" />
-        <button class="Login-btn" type="submit">Sign in</button>
-        <div class="signUpField">
-          <div class="signUpLine">
-            <p>Don't have one ?</p>
-            <a href="" class="GoToSignUpField">Create one</a>
-          </div>
+  </header>
+  <section class="mobile-nav" id="mobileNav">
+    <a class="link" href="link">All</a>
+    <a class="link" href="/Button-page.html">Button</a>
+    <a class="link" href="/link">Checkboxes</a>
+    <a class="link" href="/Element-loader-page.html">Loader</a>
+    <a class="link" href="/link">Toggle switches</a>
+  </section>
+  <section class="showcase-button">
+    <div id="darken-element" onclick="turnoffFeild()">
+    </div>
+    <div id="signInField">
+      <div id="escape-btn" onclick="turnoffFeild()" class="close-dialog">
+        <i class="fa-solid fa-xmark" onclick="turnoffFeild()"></i>
+      </div>
+      <label for="email"> Email </label>
+      <input type="email" id="Email" placeholder="Email" />
+      <label for="password"> Password </label>
+      <input type="password" id="Password" placeholder="Password" />
+      <button class="Login-btn" type="submit">Sign in</button>
+      <div class="signUpField">
+        <div class="signUpLine">
+          <p>Don't have one ?</p>
+          <a href="" class="GoToSignUpField">Create one</a>
         </div>
       </div>
-      <div class="aside-wrapper">
-        <aside class="element-picks">
-            <a class="Element" href="link"" >All</>
-            <a class="Element" href="/Button-page.html">Button</>
-            <a class="Element" href="link">Checkboxes</a>
-            <a class="Element" href="/Element-loader-page.html">Loader</a>
-            <a class="Element" href="link">Toggle switches</a>
-          </aside>
-         
+    </div>
+  </section>
+
+  <div class="container container--btn" id="container">
+    <div class="aside-wrapper">
+      <aside class="element-picks">
+        <a class="Element" href="link">All</a>
+        <a class="Element" href="/Button-page.html">Button</a>
+        <a class="Element" href="/link">Checkboxes</a>
+        <a class="Element" href="/Element-loader-page.html">Loader</a>
+        <a class="Element" href="/link">Toggle switches</a>
+      </aside>
+    </div>
+    <div class="content content-btn">
+      <div class="small-square">
+        <div class="uiverse-tooltip">
+          <span class="tooltip-button">uiverse.io</span>
+          <span> Tooltip </span>
+        </div>
       </div>
-      <!-- <section class="button-example">
+      <div class="small-square">
+        <div class="uiverse-tooltip">
+          <span class="tooltip-button">uiverse.io</span>
+          <span> Tooltip </span>
+        </div>
+      </div>
+      <div class="small-square">
+        <div class="uiverse-tooltip">
+          <span class="tooltip-button">uiverse.io</span>
+          <span> Tooltip </span>
+        </div>
+      </div>
+      <div class="small-square">
+        <div class="uiverse-tooltip">
+          <span class="tooltip-button">uiverse.io</span>
+          <span> Tooltip </span>
+        </div>
+      </div>
+      <div class="small-square">
+        <div class="uiverse-tooltip">
+          <span class="tooltip-button">uiverse.io</span>
+          <span> Tooltip </span>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- <section class="button-example">
         <div class="line first">
           <div class="small-square">
             <div class="uiverse-tooltip">
@@ -286,39 +330,9 @@
         </div>
       </section>
     </section> -->
-    <div class="content content-btn">
-      <div class="small-square">
-        <div class="uiverse-tooltip">
-          <span class="tooltip-button">uiverse.io</span>
-          <span> Tooltip </span>
-        </div>
-      </div>
-      <div class="small-square">
-        <div class="uiverse-tooltip">
-          <span class="tooltip-button">uiverse.io</span>
-          <span> Tooltip </span>
-        </div>
-      </div>
-      <div class="small-square">
-        <div class="uiverse-tooltip">
-          <span class="tooltip-button">uiverse.io</span>
-          <span> Tooltip </span>
-        </div>
-      </div>
-      <div class="small-square">
-        <div class="uiverse-tooltip">
-          <span class="tooltip-button">uiverse.io</span>
-          <span> Tooltip </span>
-        </div>
-      </div>
-      <div class="small-square">
-        <div class="uiverse-tooltip">
-          <span class="tooltip-button">uiverse.io</span>
-          <span> Tooltip </span>
-        </div>
-      </div>
-    </div>
-    
-    <script src="./Button-page.js"></script>
-  </body>
+
+
+  <script src="./Button-page.js"></script>
+</body>
+
 </html>
