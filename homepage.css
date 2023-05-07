@@ -139,7 +139,7 @@ section.hero-image {
 div#signInField {
   position: absolute;
   height: 500px;
-  width: 872px;
+  /* width: 872px; */
   z-index: 7;
   background: rgb(0, 0, 0);
   left: 50%;
