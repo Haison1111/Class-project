@@ -1,0 +1,439 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Loader - page</title>
+    <link rel="stylesheet" href="./Element-loader-page.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+      integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  </head>
+  <body>
+    <header>
+      <div class="h-start">
+        <h4>Explore</h4>
+        <h4>Create</h4>
+      </div>
+      <button class="signin" onclick="signInForm()">Sign in</button>
+    </header>
+    <section class="showcase loader">
+      <div id="darken-element" onclick="turnoffFeild()">
+      </div>
+        <div id="signInField">
+          <div id="escape-btn" onclick="turnoffFeild()">
+              <i class="fa-solid fa-xmark" onclick="turnoffFeild()"></i>
+          </div>
+          <label for="email"> Email </label>
+          <input type="email" id="Email" placeholder="Email" />
+          <label for="password"> Password </label>
+          <input type="password" id="Password" placeholder="Password" />
+          <button class="Login-btn" type="submit">Sign in</button>
+          <div class="signUpField">
+            <div class="signUpLine">
+              <p>Don't have one ?</p>
+              <a href="" class="GoToSignUpField">Create one</a>
+            </div>
+          </div>
+        </div>
+      <div class="aside-wrapper">
+      <aside class="element-picks">
+        <a class="Element" href="link"" >All</>
+        <a class="Element" href="/Button-page.html">Button</>
+        <a class="Element" href="link">Checkboxes</a>
+        <a class="Element" href="/Element-loader-page.html">Loader</a>
+        <a class="Element" href="link">Toggle switches</a>
+      </aside>
+    </div>
+      <section class="loader-example">
+        <div class="line first">
+          <div class="small-square">
+            <svg
+              class="pl"
+              viewBox="0 0 160 160"
+              width="160px"
+              height="160px"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <defs>
+                <linearGradient id="grad" x1="0" y1="0" x2="0" y2="1">
+                  <stop offset="0%" stop-color="#000"></stop>
+                  <stop offset="100%" stop-color="#fff"></stop>
+                </linearGradient>
+                <mask id="mask1">
+                  <rect
+                    x="0"
+                    y="0"
+                    width="160"
+                    height="160"
+                    fill="url(#grad)"
+                  ></rect>
+                </mask>
+                <mask id="mask2">
+                  <rect
+                    x="28"
+                    y="28"
+                    width="104"
+                    height="104"
+                    fill="url(#grad)"
+                  ></rect>
+                </mask>
+              </defs>
+
+              <g>
+                <g class="pl__ring-rotate">
+                  <circle
+                    class="pl__ring-stroke"
+                    cx="80"
+                    cy="80"
+                    r="72"
+                    fill="none"
+                    stroke="hsl(223,90%,55%)"
+                    stroke-width="16"
+                    stroke-dasharray="452.39 452.39"
+                    stroke-dashoffset="452"
+                    stroke-linecap="round"
+                    transform="rotate(-45,80,80)"
+                  ></circle>
+                </g>
+              </g>
+              <g mask="url(#mask1)">
+                <g class="pl__ring-rotate">
+                  <circle
+                    class="pl__ring-stroke"
+                    cx="80"
+                    cy="80"
+                    r="72"
+                    fill="none"
+                    stroke="hsl(193,90%,55%)"
+                    stroke-width="16"
+                    stroke-dasharray="452.39 452.39"
+                    stroke-dashoffset="452"
+                    stroke-linecap="round"
+                    transform="rotate(-45,80,80)"
+                  ></circle>
+                </g>
+              </g>
+
+              <g>
+                <g
+                  stroke-width="4"
+                  stroke-dasharray="12 12"
+                  stroke-dashoffset="12"
+                  stroke-linecap="round"
+                  transform="translate(80,80)"
+                >
+                  <polyline
+                    class="pl__tick"
+                    stroke="hsl(223,10%,90%)"
+                    points="0,2 0,14"
+                    transform="rotate(-135,0,0) translate(0,40)"
+                  ></polyline>
+                  <polyline
+                    class="pl__tick"
+                    stroke="hsl(223,10%,90%)"
+                    points="0,2 0,14"
+                    transform="rotate(-90,0,0) translate(0,40)"
+                  ></polyline>
+                  <polyline
+                    class="pl__tick"
+                    stroke="hsl(223,10%,90%)"
+                    points="0,2 0,14"
+                    transform="rotate(-45,0,0) translate(0,40)"
+                  ></polyline>
+                  <polyline
+                    class="pl__tick"
+                    stroke="hsl(223,10%,90%)"
+                    points="0,2 0,14"
+                    transform="rotate(0,0,0) translate(0,40)"
+                  ></polyline>
+                  <polyline
+                    class="pl__tick"
+                    stroke="hsl(223,10%,90%)"
+                    points="0,2 0,14"
+                    transform="rotate(45,0,0) translate(0,40)"
+                  ></polyline>
+                  <polyline
+                    class="pl__tick"
+                    stroke="hsl(223,10%,90%)"
+                    points="0,2 0,14"
+                    transform="rotate(90,0,0) translate(0,40)"
+                  ></polyline>
+                  <polyline
+                    class="pl__tick"
+                    stroke="hsl(223,10%,90%)"
+                    points="0,2 0,14"
+                    transform="rotate(135,0,0) translate(0,40)"
+                  ></polyline>
+                  <polyline
+                    class="pl__tick"
+                    stroke="hsl(223,10%,90%)"
+                    points="0,2 0,14"
+                    transform="rotate(180,0,0) translate(0,40)"
+                  ></polyline>
+                </g>
+              </g>
+              <g mask="url(#mask1)">
+                <g
+                  stroke-width="4"
+                  stroke-dasharray="12 12"
+                  stroke-dashoffset="12"
+                  stroke-linecap="round"
+                  transform="translate(80,80)"
+                >
+                  <polyline
+                    class="pl__tick"
+                    stroke="hsl(223,90%,80%)"
+                    points="0,2 0,14"
+                    transform="rotate(-135,0,0) translate(0,40)"
+                  ></polyline>
+                  <polyline
+                    class="pl__tick"
+                    stroke="hsl(223,90%,80%)"
+                    points="0,2 0,14"
+                    transform="rotate(-90,0,0) translate(0,40)"
+                  ></polyline>
+                  <polyline
+                    class="pl__tick"
+                    stroke="hsl(223,90%,80%)"
+                    points="0,2 0,14"
+                    transform="rotate(-45,0,0) translate(0,40)"
+                  ></polyline>
+                  <polyline
+                    class="pl__tick"
+                    stroke="hsl(223,90%,80%)"
+                    points="0,2 0,14"
+                    transform="rotate(0,0,0) translate(0,40)"
+                  ></polyline>
+                  <polyline
+                    class="pl__tick"
+                    stroke="hsl(223,90%,80%)"
+                    points="0,2 0,14"
+                    transform="rotate(45,0,0) translate(0,40)"
+                  ></polyline>
+                  <polyline
+                    class="pl__tick"
+                    stroke="hsl(223,90%,80%)"
+                    points="0,2 0,14"
+                    transform="rotate(90,0,0) translate(0,40)"
+                  ></polyline>
+                  <polyline
+                    class="pl__tick"
+                    stroke="hsl(223,90%,80%)"
+                    points="0,2 0,14"
+                    transform="rotate(135,0,0) translate(0,40)"
+                  ></polyline>
+                  <polyline
+                    class="pl__tick"
+                    stroke="hsl(223,90%,80%)"
+                    points="0,2 0,14"
+                    transform="rotate(180,0,0) translate(0,40)"
+                  ></polyline>
+                </g>
+              </g>
+
+              <g>
+                <g transform="translate(64,28)">
+                  <g class="pl__arrows" transform="rotate(45,16,52)">
+                    <path
+                      fill="hsl(3,90%,55%)"
+                      d="M17.998,1.506l13.892,43.594c.455,1.426-.56,2.899-1.998,2.899H2.108c-1.437,0-2.452-1.473-1.998-2.899L14.002,1.506c.64-2.008,3.356-2.008,3.996,0Z"
+                    ></path>
+                    <path
+                      fill="hsl(223,10%,90%)"
+                      d="M14.009,102.499L.109,58.889c-.453-1.421,.559-2.889,1.991-2.889H29.899c1.433,0,2.444,1.468,1.991,2.889l-13.899,43.61c-.638,2.001-3.345,2.001-3.983,0Z"
+                    ></path>
+                  </g>
+                </g>
+              </g>
+              <g mask="url(#mask2)">
+                <g transform="translate(64,28)">
+                  <g class="pl__arrows" transform="rotate(45,16,52)">
+                    <path
+                      fill="hsl(333,90%,55%)"
+                      d="M17.998,1.506l13.892,43.594c.455,1.426-.56,2.899-1.998,2.899H2.108c-1.437,0-2.452-1.473-1.998-2.899L14.002,1.506c.64-2.008,3.356-2.008,3.996,0Z"
+                    ></path>
+                    <path
+                      fill="hsl(223,90%,80%)"
+                      d="M14.009,102.499L.109,58.889c-.453-1.421,.559-2.889,1.991-2.889H29.899c1.433,0,2.444,1.468,1.991,2.889l-13.899,43.61c-.638,2.001-3.345,2.001-3.983,0Z"
+                    ></path>
+                  </g>
+                </g>
+              </g>
+            </svg>
+          </div>
+          <div class="small-square">
+            <div class="loader-ninesquare">
+                <div class="cell d-0"></div>
+                <div class="cell d-1"></div>
+                <div class="cell d-2"></div>
+              
+                <div class="cell d-1"></div>
+                <div class="cell d-2"></div>
+                
+                
+                <div class="cell d-2"></div>
+                <div class="cell d-3"></div>
+                
+                
+                <div class="cell d-3"></div>
+                <div class="cell d-4"></div>
+                
+                
+              </div>
+          </div>
+          <div class="small-square">
+            <div class="cube-loader">
+                <div class="cube-top"></div>
+                <div class="cube-wrapper">
+                  <span style="--i:0" class="cube-span"></span>
+                  <span style="--i:1" class="cube-span"></span>
+                  <span style="--i:2" class="cube-span"></span>
+                  <span style="--i:3" class="cube-span"></span>
+                </div>
+              </div>
+          </div>
+          <div class="small-square">
+            <div class="three-body">
+                <div class="three-body__dot"></div>
+                <div class="three-body__dot"></div>
+                <div class="three-body__dot"></div>
+                </div>
+          </div>
+        </div>
+        <div class="line second">
+          <div class="small-square">
+            <div class="loader-three-line"></div>
+          </div>
+          <div class="small-square">
+            <div class="newtons-cradle">
+                <div class="newtons-cradle__dot"></div>
+                <div class="newtons-cradle__dot"></div>
+                <div class="newtons-cradle__dot"></div>
+                <div class="newtons-cradle__dot"></div>
+                </div>
+          </div>
+          <div class="small-square">
+            <div class="circle-spinner">
+                <div class="spinner-circle-1"></div>
+            </div>
+          </div>
+          <div class="small-square">
+            <div class="loader-boxstack">
+                <div class="box box-1">
+                  <div class="side-left"></div>
+                  <div class="side-right"></div>
+                  <div class="side-top"></div>
+                </div>
+                <div class="box box-2">
+                  <div class="side-left"></div>
+                  <div class="side-right"></div>
+                  <div class="side-top"></div>
+                </div>
+                <div class="box box-3">
+                  <div class="side-left"></div>
+                  <div class="side-right"></div>
+                  <div class="side-top"></div>
+                </div>
+                <div class="box box-4">
+                  <div class="side-left"></div>
+                  <div class="side-right"></div>
+                  <div class="side-top"></div>
+                </div>
+              </div>
+          </div>
+        </div>
+        <div class="line third">
+          <div class="small-square">
+            <div class="loader-bouncing-box"></div>
+          </div>
+          <div class="small-square">
+            <div class="spinner-box-blue">
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                </div>
+          </div>
+          <div class="small-square">
+            <div class="wrapper-ball">
+                <div class="circle-ball"></div>
+                <div class="circle-ball"></div>
+                <div class="circle-ball"></div>
+                <div class="shadow-ball"></div>
+                <div class="shadow-ball"></div>
+                <div class="shadow-ball"></div>
+            </div>
+          </div>
+          <div class="small-square">
+            <div class="loading-vector">
+                <svg width="64px" height="48px">
+                    <polyline points="0.157 23.954, 14 23.954, 21.843 48, 43 0, 50 24, 64 24" id="back"></polyline>
+                  <polyline points="0.157 23.954, 14 23.954, 21.843 48, 43 0, 50 24, 64 24" id="front"></polyline>
+                </svg>
+              </div>
+          </div>
+        </div>
+        <div class="line four">
+            <div class="small-square">
+                <div class="dot-spinner">
+                    <div class="dot-spinner__dot"></div>
+                    <div class="dot-spinner__dot"></div>
+                    <div class="dot-spinner__dot"></div>
+                    <div class="dot-spinner__dot"></div>
+                    <div class="dot-spinner__dot"></div>
+                    <div class="dot-spinner__dot"></div>
+                    <div class="dot-spinner__dot"></div>
+                    <div class="dot-spinner__dot"></div>
+                </div>
+            </div>
+            <div class="small-square">
+                <div class="loader-clock"></div>
+            </div>
+            <div class="small-square">
+                <span class="loading-text">Loading</span>
+            </div>
+            <div class="small-square">
+                <div class="loader-snowing">
+                    <div class="snow">
+                        <span style="--i:11"></span>
+                        <span style="--i:12"></span>
+                        <span style="--i:15"></span>
+                        <span style="--i:17"></span>
+                        <span style="--i:18"></span>
+                        <span style="--i:13"></span>
+                        <span style="--i:14"></span>
+                        <span style="--i:19"></span>
+                        <span style="--i:20"></span>
+                        <span style="--i:10"></span>
+                        <span style="--i:18"></span>
+                        <span style="--i:13"></span>
+                        <span style="--i:14"></span>
+                        <span style="--i:19"></span>
+                        <span style="--i:20"></span>
+                        <span style="--i:10"></span>
+                        <span style="--i:18"></span>
+                        <span style="--i:13"></span>
+                        <span style="--i:14"></span>
+                        <span style="--i:19"></span>
+                        <span style="--i:20"></span>
+                        <span style="--i:10"></span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <script src="./Button-page.js"></script>
+      </section>
+    </section>
+  </body>
+</html>
