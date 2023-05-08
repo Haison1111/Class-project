@@ -1444,11 +1444,11 @@ button.amongus {
   }
   .burger-button {
     position: absolute;
-    top: 12px;
+    top: 23px;
     right: 20px;
     padding-left: 15px;
     padding-right: 15px;
-    display: none;
+    visibility: hidden;
 }
 .section-header {
   display: flex;
@@ -1498,7 +1498,7 @@ button.amongus {
 
 @media only screen and (max-width: 768px){
   .burger-button {
-      display: block;
+    visibility:visible;
   }
   .signin {
     display: none;
@@ -1524,9 +1524,11 @@ button.amongus {
   .content-btn { 
     grid-template-columns: repeat(2,1fr);
   }
-
+  
+}
 }
 @media only screen and (max-width: 1336px){ 
-
+ 
+}
 }
   
