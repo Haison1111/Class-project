@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>toggle-switches</title>
+  <link rel="stylesheet" href="./toggle-switches.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap"
+    rel="stylesheet">
+
+</head>
+
+<body>
+  <header>
+    <div class="section-header">
+      <div class="h-start">
+        <h4>Explore</h4>
+        <h4>Create</h4>
+      </div>
+      <button class="signin" onclick="signInForm()">Sign in</button>
+      <div class="burger-button">
+        <i class="fa-solid fa-bars" onclick="mobileMenuNav()" style="color: #ffffff;"></i></path>
+      </div>
+    </div>
+  </header>
+  <section class="mobile-nav" id="mobileNav">
+    <a class="link" href="link">All</a>
+    <a class="link" href="/Button-page.html">Button</a>
+    <a class="link" href="/link">Checkboxes</a>
+    <a class="link" href="/Element-loader-page.html">Loader</a>
+    <a class="link" href="/link">Toggle switches</a>
+  </section>
+  <section class="showcase-button">
+    <div id="darken-element" onclick="turnoffFeild()">
+    </div>
+    <div id="signInField">
+      <div id="escape-btn" onclick="turnoffFeild()" class="close-dialog">
+        <i class="fa-solid fa-xmark" onclick="turnoffFeild()"></i>
+      </div>
+      <label for="email"> Email </label>
+      <input type="email" id="Email" placeholder="Email" />
+      <label for="password"> Password </label>
+      <input type="password" id="Password" placeholder="Password" />
+      <button class="Login-btn" type="submit">Sign in</button>
+      <div class="signUpField">
+        <div class="signUpLine">
+          <p>Don't have one ?</p>
+          <a href="" class="GoToSignUpField">Create one</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="container container--btn" id="container">
+    <div class="aside-wrapper">
+      <aside class="element-picks">
+        <a class="Element" href="link">All</a>
+        <a class="Element" href="/Button-page.html">Button</a>
+        <a class="Element" href="/link">Checkboxes</a>
+        <a class="Element" href="/Element-loader-page.html">Loader</a>
+        <a class="Element" href="/link">Toggle switches</a>
+      </aside>
+    </div>
+    <div class="content content-btn">
+      <div class="small-square">
+        <div>
+        </div>
+      </div>
+      <div class="small-square">
+        <div>
+        </div>
+      </div>
+      <div class="small-square">
+        <div>
+        </div>
+      </div>
+      <div class="small-square">
+        <div>
+        </div>
+      </div>
+      <div class="small-square">
+        <div>
+        </div>
+      </div>
+      <div class="small-square">
+        <div>
+        </div>
+      </div>
+      <div class="small-square">
+        <div>
+        </div>
+      </div>
+      <div class="small-square">
+        <div>
+        </div>
+      </div>
+      <div class="small-square">
+        <div>
+        </div>
+      </div>
+      <div class="small-square">
+        <div>
+        </div>
+      </div>
+      <div class="small-square">
+        <div>
+        </div>
+      </div>
+      <div class="small-square">
+        <div>
+        </div>
+      </div>
+    </div>
+
+
+
+    <script src="./toggle-switches.js"></script>
+</body>
+
+</html>
