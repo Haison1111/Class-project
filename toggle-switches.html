@@ -1,0 +1,1104 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>toggle-switches</title>
+  <link rel="stylesheet" href="./toggle-switches.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap"
+    rel="stylesheet">
+
+</head>
+
+<body>
+  <header>
+    <div class="section-header">
+      <div class="h-start">
+        <h4>Explore</h4>
+        <h4>Create</h4>
+      </div>
+      <button class="signin" onclick="signInForm()">Sign in</button>
+      <div class="burger-button">
+        <i class="fa-solid fa-bars" onclick="mobileMenuNav()" style="color: #ffffff;"></i></path>
+      </div>
+    </div>
+  </header>
+  <section class="mobile-nav" id="mobileNav">
+    <a class="link" href="link">All</a>
+    <a class="link" href="/Button-page.html">Button</a>
+    <a class="link" href="/link">Checkboxes</a>
+    <a class="link" href="/Element-loader-page.html">Loader</a>
+    <a class="link" href="/link">Toggle switches</a>
+  </section>
+  <section class="showcase-button">
+    <div id="darken-element" onclick="turnoffFeild()">
+    </div>
+    <div id="signInField">
+      <div id="escape-btn" onclick="turnoffFeild()" class="close-dialog">
+        <i class="fa-solid fa-xmark" onclick="turnoffFeild()"></i>
+      </div>
+      <label for="email"> Email </label>
+      <input type="email" id="Email" placeholder="Email" />
+      <label for="password"> Password </label>
+      <input type="password" id="Password" placeholder="Password" />
+      <button class="Login-btn" type="submit">Sign in</button>
+      <div class="signUpField">
+        <div class="signUpLine">
+          <p>Don't have one ?</p>
+          <a href="" class="GoToSignUpField">Create one</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="container container--btn" id="container">
+    <div class="aside-wrapper">
+      <aside class="element-picks">
+        <a class="Element" href="link">All</a>
+        <a class="Element" href="/Button-page.html">Button</a>
+        <a class="Element" href="/link">Checkboxes</a>
+        <a class="Element" href="/Element-loader-page.html">Loader</a>
+        <a class="Element" href="/link">Toggle switches</a>
+      </aside>
+    </div>
+    <div class="content content-btn">
+      <!-- 1st -->
+      <div class="small-square">
+        <div>
+          <label class="switch_1">
+            <input type="checkbox">
+            <div class="slider_1"></div>
+            <div class="slider-card_1">
+              <div class="slider-card-face_1 slider-card-front_1"></div>
+              <div class="slider-card-face_1 slider-card-back_1"></div>
+            </div>
+          </label>
+          <style>
+            * {
+              padding: 0;
+              margin: 0;
+              box-sizing: border-box;
+            }
+
+            button {
+              font-family: inherit;
+            }
+
+            .switch_1 {
+              --circle-dim: 1.4em;
+              font-size: 17px;
+              position: relative;
+              display: inline-block;
+              width: 3.5em;
+              height: 2em;
+            }
+
+            /* Hide default HTML checkbox */
+            .switch_1 input {
+              opacity: 0;
+              width: 0;
+              height: 0;
+            }
+
+            /* The slider */
+            .slider_1 {
+              position: absolute;
+              cursor: pointer;
+              top: 0;
+              left: 0;
+              right: 0;
+              bottom: 0;
+              background-color: #f5aeae;
+              transition: .4s;
+              border-radius: 30px;
+            }
+
+            .slider-card_1 {
+              position: absolute;
+              content: "";
+              height: var(--circle-dim);
+              width: var(--circle-dim);
+              border-radius: 20px;
+              left: 0.3em;
+              bottom: 0.3em;
+              transition: .4s;
+              pointer-events: none;
+            }
+
+            .slider-card-face_1 {
+              position: absolute;
+              inset: 0;
+              backface-visibility: hidden;
+              perspective: 1000px;
+              border-radius: 50%;
+              transition: .4s transform;
+            }
+
+            .slider-card-front_1 {
+              background-color: #DC3535;
+            }
+
+            .slider-card-back_1 {
+              background-color: #379237;
+              transform: rotateY(180deg);
+            }
+
+            input:checked~.slider-card_1 .slider-card-back_1 {
+              transform: rotateY(0);
+            }
+
+            input:checked~.slider-card_1 .slider-card-front_1 {
+              transform: rotateY(-180deg);
+            }
+
+            input:checked~.slider-card_1 {
+              transform: translateX(1.5em);
+            }
+
+            input:checked~.slider_1 {
+              background-color: #9ed99c;
+            }
+          </style>
+        </div>
+      </div>
+      <!-- 2nd -->
+      <div class="small-square">
+        <div>
+          <label class="switch_2">
+            <input type="checkbox">
+            <span class="slider_2"></span>
+          </label>
+          <style>
+            * {
+              padding: 0;
+              margin: 0;
+              box-sizing: border-box;
+            }
+
+            button {
+              font-family: inherit;
+            }
+
+            /* The switch - the box around the slider */
+            .switch_2 {
+              font-size: 17px;
+              position: relative;
+              display: inline-block;
+              width: 3.5em;
+              height: 2em;
+            }
+
+            /* Hide default HTML checkbox */
+            .switch_2 input {
+              opacity: 0;
+              width: 0;
+              height: 0;
+            }
+
+            /* The slider */
+            .slider_2 {
+              position: absolute;
+              cursor: pointer;
+              top: 0;
+              left: 0;
+              right: 0;
+              bottom: 0;
+              background-color: #fff;
+              border: 1px solid #adb5bd;
+              transition: .4s;
+              border-radius: 30px;
+            }
+
+            .slider_2:before {
+              position: absolute;
+              content: "";
+              height: 1.4em;
+              width: 1.4em;
+              border-radius: 20px;
+              left: 0.27em;
+              bottom: 0.25em;
+              background-color: #adb5bd;
+              transition: .4s;
+            }
+
+            input:checked+.slider_2 {
+              background-color: #007bff;
+              border: 1px solid #007bff;
+            }
+
+            input:focus+.slider_2 {
+              box-shadow: 0 0 1px #007bff;
+            }
+
+            input:checked+.slider_2:before {
+              transform: translateX(1.4em);
+              background-color: #fff;
+            }
+          </style>
+        </div>
+      </div>
+      <!-- 3rd -->
+      <div class="small-square">
+        <div>
+          <label>
+            <input class="toggle-checkbox_3" type="checkbox">
+            <div class="toggle-slot_3">
+              <div class="sun-icon-wrapper_3">
+                <div class="iconify_3 sun-icon_3" data-icon="feather-sun" data-inline="false"></div>
+              </div>
+              <div class="toggle-button_3"></div>
+              <div class="moon-icon-wrapper_3">
+                <div class="iconify_3 moon-icon_3" data-icon="feather-moon" data-inline="false"></div>
+              </div>
+            </div>
+          </label>
+          <style>
+            * {
+              padding: 0;
+              margin: 0;
+              box-sizing: border-box;
+            }
+
+            button {
+              font-family: inherit;
+            }
+
+            .toggle-checkbox_3 {
+              position: absolute;
+              opacity: 0;
+              cursor: pointer;
+              height: 0;
+              width: 0;
+            }
+
+            .toggle-slot_3 {
+              font-size: 10px;
+              position: relative;
+              height: 3.5em;
+              width: 7em;
+              border: 0px solid transparent;
+              border-radius: 10em;
+              background-color: white;
+              transition: background-color 250ms;
+            }
+
+            .toggle-checkbox_3:checked~.toggle-slot_3 {
+              background-color: #374151;
+            }
+
+            .toggle-button_3 {
+              transform: translate(0.3em, 0.25em);
+              position: absolute;
+              height: 3em;
+              width: 3em;
+              border-radius: 50%;
+              background-color: #ffeccf;
+              box-shadow: inset 0px 0px 0px 0.75em #ffbb52;
+              transition: background-color 250ms, border-color 250ms, transform 500ms cubic-bezier(.26, 2, .46, .71);
+            }
+
+            .toggle-checkbox_3:checked~.toggle-slot_3 .toggle-button_3 {
+              background-color: #485367;
+              box-shadow: inset 0px 0px 0px 0.75em white;
+              transform: translate(3.65em, 0.25em);
+            }
+
+            .sun-icon_3 {
+              position: absolute;
+              height: 6em;
+              width: 6em;
+              color: #ffbb52;
+            }
+
+            .sun-icon-wrapper_3 {
+              position: absolute;
+              height: 6em;
+              width: 6em;
+              opacity: 1;
+              transform: translate(2em, 2em) rotate(15deg);
+              transform-origin: 50% 50%;
+              transition: opacity 150ms, transform 500ms cubic-bezier(.26, 2, .46, .71);
+            }
+
+            .toggle-checkbox_3:checked~.toggle-slot_3 .sun-icon-wrapper_3 {
+              opacity: 0;
+              transform: translate(3em, 2em) rotate(0deg);
+            }
+
+            .moon-icon_3 {
+              position: absolute;
+              height: 6em;
+              width: 6em;
+              color: white;
+            }
+
+            .moon-icon-wrapper_3 {
+              position: absolute;
+              height: 6em;
+              width: 6em;
+              opacity: 0;
+              transform: translate(11em, 2em) rotate(0deg);
+              transform-origin: 50% 50%;
+              transition: opacity 150ms, transform 500ms cubic-bezier(.26, 2.5, .46, .71);
+            }
+
+            .toggle-checkbox_3:checked~.toggle-slot_3 .moon-icon-wrapper_3 {
+              opacity: 1;
+              transform: translate(2em, 2em) rotate(-15deg);
+            }
+          </style>
+        </div>
+      </div>
+      <!-- 4th -->
+      <div class="small-square">
+        <div>
+          <label class="switch_4">
+            <input type="checkbox">
+            <span class="slider_4"></span>
+          </label>
+          <style>
+            * {
+              padding: 0;
+              margin: 0;
+              box-sizing: border-box;
+            }
+
+            button {
+              font-family: inherit;
+            }
+
+            /* The switch - the box around the slider */
+            .switch_4 {
+              font-size: 17px;
+              position: relative;
+              display: inline-block;
+              width: 3.5em;
+              height: 2em;
+            }
+
+            /* Hide default HTML checkbox */
+            .switch_4 input {
+              opacity: 0;
+              width: 0;
+              height: 0;
+            }
+
+            /* The slider */
+            .slider_4 {
+              --background: #28096b;
+              position: absolute;
+              cursor: pointer;
+              top: 0;
+              left: 0;
+              right: 0;
+              bottom: 0;
+              background-color: var(--background);
+              transition: .5s;
+              border-radius: 30px;
+            }
+
+            .slider_4:before {
+              position: absolute;
+              content: "";
+              height: 1.4em;
+              width: 1.4em;
+              border-radius: 50%;
+              left: 10%;
+              bottom: 15%;
+              box-shadow: inset 8px -4px 0px 0px #fff000;
+              background: var(--background);
+              transition: .5s;
+            }
+
+            input:checked+.slider_4 {
+              background-color: #522ba7;
+            }
+
+            input:checked+.slider_4:before {
+              transform: translateX(100%);
+              box-shadow: inset 15px -4px 0px 15px #fff000;
+            }
+          </style>
+        </div>
+      </div>
+      <!-- 5th -->
+      <div class="small-square">
+        <div>
+          <input class="switch_5" type="checkbox">
+          <style>
+            * {
+              padding: 0;
+              margin: 0;
+              box-sizing: border-box;
+            }
+
+            button {
+              font-family: inherit;
+            }
+
+            .switch_5 {
+              position: relative;
+              height: 1.5rem;
+              width: 3rem;
+              cursor: pointer;
+              appearance: none;
+              -webkit-appearance: none;
+              border-radius: 9999px;
+              background-color: rgba(100, 116, 139, 0.377);
+              transition: all .3s ease;
+            }
+
+            .switch_5:checked {
+              background-color: rgba(236, 72, 153, 1);
+            }
+
+            .switch_5::before {
+              position: absolute;
+              content: "";
+              left: calc(1.5rem - 1.6rem);
+              top: calc(1.5rem - 1.6rem);
+              display: block;
+              height: 1.6rem;
+              width: 1.6rem;
+              cursor: pointer;
+              border: 1px solid rgba(100, 116, 139, 0.527);
+              border-radius: 9999px;
+              background-color: rgba(255, 255, 255, 1);
+              box-shadow: 0 3px 10px rgba(100, 116, 139, 0.327);
+              transition: all .3s ease;
+            }
+
+            .switch_5:checked:before {
+              transform: translateX(100%);
+              border-color: rgba(236, 72, 153, 1);
+            }
+          </style>
+        </div>
+      </div>
+      <!-- 6th -->
+      <div class="small-square">
+        <div>
+          <label class="switch_6">
+            <input type="checkbox">
+            <span class="slider_6"></span>
+          </label>
+          <style>
+            * {
+              padding: 0;
+              margin: 0;
+              box-sizing: border-box;
+            }
+
+            button {
+              font-family: inherit;
+            }
+
+            .switch_6 {
+              position: relative;
+              display: inline-block;
+              width: 120px;
+              height: 34px;
+            }
+
+            .switch_6 input {
+              display: none;
+            }
+
+            .slider_6 {
+              position: absolute;
+              cursor: pointer;
+              top: 0;
+              left: 0;
+              right: 0;
+              bottom: 0;
+              background-color: #3C3C3C;
+              -webkit-transition: .4s;
+              transition: .4s;
+              border-radius: 34px;
+            }
+
+            .slider_6:before {
+              position: absolute;
+              content: "";
+              height: 26px;
+              width: 26px;
+              left: 4px;
+              bottom: 4px;
+              background-color: white;
+              -webkit-transition: .4s;
+              transition: .4s;
+              border-radius: 50%;
+            }
+
+            input:checked+.slider_6 {
+              background-color: #0E6EB8;
+            }
+
+            input:focus+.slider_6 {
+              box-shadow: 0 0 1px #2196F3;
+            }
+
+            input:checked+.slider_6:before {
+              -webkit-transform: translateX(26px);
+              -ms-transform: translateX(26px);
+              transform: translateX(85px);
+            }
+
+            /*------ ADDED CSS ---------*/
+            .slider_6:after {
+              content: 'DISABLED';
+              color: white;
+              display: block;
+              position: absolute;
+              transform: translate(-50%, -50%);
+              top: 50%;
+              left: 50%;
+              font-size: 10px;
+              font-family: Verdana, sans-serif;
+            }
+
+            input:checked+.slider_6:after {
+              content: 'ENABLED';
+            }
+
+            /*--------- END --------*/
+          </style>
+        </div>
+      </div>
+      <!-- 7th -->
+      <div class="small-square">
+        <div>
+          <label class="switch_7">
+            <input class="chk_7" type="checkbox">
+            <span class="slider_7"></span>
+          </label>
+          <style>
+            * {
+              padding: 0;
+              margin: 0;
+              box-sizing: border-box;
+            }
+
+            button {
+              font-family: inherit;
+            }
+
+            /* The switch - the box around the slider */
+            .switch_7 {
+              font-size: 17px;
+              position: relative;
+              display: inline-block;
+              width: 2em;
+              height: 2em;
+            }
+
+            /* Hide default HTML checkbox */
+            .switch_7 .chk_7 {
+              opacity: 0;
+              width: 0;
+              height: 0;
+            }
+
+            /* The slider */
+            .slider_7 {
+              position: absolute;
+              cursor: pointer;
+              top: 0;
+              left: 0;
+              right: 0;
+              bottom: 0;
+              background-color: #ccc;
+              transition: .4s;
+              border-radius: 50%;
+            }
+
+            .slider_7:before {
+              position: absolute;
+              content: "";
+              height: 1.4em;
+              width: 1.4em;
+              border-radius: 2.5px;
+              left: 0.3em;
+              bottom: 0.3em;
+              background-color: white;
+              transition: .4s;
+              scale: 0;
+            }
+
+            .chk_7:checked+.slider_7 {
+              background-color: limegreen;
+              transform: scale(0.7);
+              border-radius: 50%;
+            }
+
+            .chk_7:checked+.slider_7:before {
+              transform: rotateZ(360deg);
+              scale: 1;
+              border-radius: 50%;
+            }
+          </style>
+        </div>
+      </div>
+      <!-- 8th -->
+      <div class="small-square">
+        <div>
+          <input id="toggle_checkbox_8" type="checkbox">
+          <label for="toggle_checkbox_8"></label>
+          <style>
+            * {
+              padding: 0;
+              margin: 0;
+              box-sizing: border-box;
+            }
+
+            button {
+              font-family: inherit;
+            }
+
+            #toggle_checkbox_8 {
+              display: none;
+            }
+
+            label[for="toggle_checkbox_8"] {
+              position: absolute;
+              top: 50%;
+              right: 0px;
+              left: 0;
+              display: block;
+              width: 70px;
+              height: 35px;
+              margin: 0 auto;
+              transform: translateY(-50%);
+              cursor: pointer;
+            }
+
+            label[for="toggle_checkbox_8"]:before {
+              top: 4px;
+              left: 4px;
+              width: 27px;
+              height: 27px;
+              border: 2px solid red;
+            }
+
+            label[for="toggle_checkbox_8"]:after {
+              top: 0;
+              right: 0;
+              width: 70px;
+              height: 35px;
+              border: 2px solid #143240;
+            }
+
+            label[for="toggle_checkbox_8"]:before,
+            label[for="toggle_checkbox_8"]:after {
+              content: "";
+              position: absolute;
+              border-radius: 50px;
+              box-sizing: border-box;
+              transition: 0.5s ease top, 0.5s ease left, 0.5s ease right, 0.5s ease width,
+                0.5s ease height, 0.5s ease border-color;
+            }
+
+            #toggle_checkbox_8:checked+label[for="toggle_checkbox_8"]:before {
+              top: 0;
+              left: 0;
+              width: 70px;
+              height: 35px;
+              border-color: #143240;
+              border: 2px solid #143240
+            }
+
+            #toggle_checkbox_8:checked+label[for="toggle_checkbox_8"]:after {
+              top: 4px;
+              right: 4px;
+              width: 27px;
+              height: 27px;
+              border-color: red;
+              border: 2px solid red;
+            }
+          </style>
+        </div>
+      </div>
+      <!-- 9th -->
+      <div class="small-square">
+        <div>
+          <label class="switch_9">
+            <input type="checkbox">
+            <span class="slider_9"></span>
+          </label>
+          <style>
+            * {
+              padding: 0;
+              margin: 0;
+              box-sizing: border-box;
+            }
+
+            button {
+              font-family: inherit;
+            }
+
+            .switch_9 {
+              --light: #ffffff;
+              --dark: #00000080;
+              font-size: 20px;
+              position: relative;
+              display: inline-block;
+              width: 3.5em;
+              height: 2.1em;
+              transform: skew(-10deg);
+            }
+
+            .switch_9 input {
+              opacity: 0;
+              width: 0;
+              height: 0;
+            }
+
+            .slider_9 {
+              position: absolute;
+              cursor: pointer;
+              top: 0;
+              left: 0;
+              right: 0;
+              bottom: 0;
+              background-color: var(--light);
+              border: 1px solid var(--dark);
+              box-shadow: 5px 5px 5px var(--dark);
+              transition: .4s;
+              border-radius: 30px;
+            }
+
+            .slider_9:before {
+              position: absolute;
+              content: "☀";
+              display: flex;
+              justify-content: center;
+              align-items: center;
+              height: 1.4em;
+              width: 1.4em;
+              border-radius: 20px;
+              left: 0.2em;
+              bottom: 0.5em;
+              color: var(--dark);
+              transition: .4s;
+              transform: scale(1.2);
+            }
+
+            .switch_9 input:checked+.slider_9:before {
+              transform: translateX(1.5em) scale(1.2);
+              ;
+              content: "☽";
+              color: var(--light);
+            }
+
+            .switch_9 input:checked+.slider_9 {
+              background-color: var(--dark);
+            }
+          </style>
+        </div>
+      </div>
+      <!-- 10th -->
+      <div class="small-square">
+        <div>
+          <input type="checkbox" class="plus-minus">
+          <style>
+            * {
+              padding: 0;
+              margin: 0;
+              box-sizing: border-box;
+            }
+
+            button {
+              font-family: inherit;
+            }
+
+            .plus-minus {
+              --primary: #1E2235;
+              --secondary: #FAFBFF;
+              --duration: .5s;
+              -webkit-appearance: none;
+              -moz-appearance: none;
+              -webkit-tap-highlight-color: transparent;
+              -webkit-mask-image: -webkit-radial-gradient(white, black);
+              outline: none;
+              cursor: pointer;
+              position: relative;
+              overflow: hidden;
+              transform-style: preserve-3d;
+              perspective: 240px;
+              border-radius: 50%;
+              width: 36px;
+              height: 36px;
+              border: 4px solid var(--primary);
+              background-size: 300% 300%;
+              transition: transform 0.3s;
+              transform: scale(var(--scale, 1)) translateZ(0);
+              -webkit-animation: var(--name, unchecked) var(--duration) ease forwards;
+              animation: var(--name, unchecked) var(--duration) ease forwards;
+            }
+
+            .plus-minus:before,
+            .plus-minus:after {
+              content: "";
+              position: absolute;
+              width: 16px;
+              height: var(--height, 16px);
+              left: 6px;
+              top: var(--top, 6px);
+              background: var(--background, var(--primary));
+              -webkit-animation: var(--name-icon-b, var(--name-icon, unchecked-icon)) var(--duration) ease forwards;
+              animation: var(--name-icon-b, var(--name-icon, unchecked-icon)) var(--duration) ease forwards;
+            }
+
+            .plus-minus:before {
+              -webkit-clip-path: polygon(0 6px, 6px 6px, 6px 0, 10px 0, 10px 6px, 16px 6px, 16px 10px, 10px 10px, 10px 16px, 6px 16px, 6px 10px, 0 10px);
+              clip-path: polygon(0 6px, 6px 6px, 6px 0, 10px 0, 10px 6px, 16px 6px, 16px 10px, 10px 10px, 10px 16px, 6px 16px, 6px 10px, 0 10px);
+            }
+
+            .plus-minus:after {
+              --height: 4px;
+              --top: 12px;
+              --background: var(--secondary);
+              --name-icon-b: var(--name-icon-a, checked-icon);
+            }
+
+            .plus-minus:active {
+              --scale: .95;
+            }
+
+            .plus-minus:checked {
+              --name: checked;
+              --name-icon-b: checked-icon;
+              --name-icon-a: unchecked-icon;
+            }
+
+            @keyframes checked-icon {
+              from {
+                transform: translateZ(12px);
+              }
+
+              to {
+                transform: translateX(16px) rotateY(90deg) translateZ(12px);
+              }
+            }
+
+            @keyframes unchecked-icon {
+              from {
+                transform: translateX(-16px) rotateY(-90deg) translateZ(12px);
+              }
+
+              to {
+                transform: translateZ(12px);
+              }
+            }
+
+            @keyframes checked {
+              from {
+                background-image: radial-gradient(ellipse at center, var(--primary) 0%, var(--primary) 25%, var(--secondary) 25.1%, var(--secondary) 100%);
+                background-position: 100% 50%;
+              }
+
+              to {
+                background-image: radial-gradient(ellipse at center, var(--primary) 0%, var(--primary) 25%, var(--secondary) 25.1%, var(--secondary) 100%);
+                background-position: 50% 50%;
+              }
+            }
+
+            @keyframes unchecked {
+              from {
+                background-image: radial-gradient(ellipse at center, var(--secondary) 0%, var(--secondary) 25%, var(--primary) 25.1%, var(--primary) 100%);
+                background-position: 100% 50%;
+              }
+
+              to {
+                background-image: radial-gradient(ellipse at center, var(--secondary) 0%, var(--secondary) 25%, var(--primary) 25.1%, var(--primary) 100%);
+                background-position: 50% 50%;
+              }
+            }
+          </style>
+        </div>
+      </div>
+      <!-- 11th -->
+      <div class="small-square">
+        <div>
+          <label class="switch_11">
+            <input type="checkbox" class="slider-input_11">
+            <span class="slider_11"></span>
+          </label>
+          <style>
+            * {
+              padding: 0;
+              margin: 0;
+              box-sizing: border-box;
+            }
+
+            button {
+              font-family: inherit;
+            }
+
+            .switch_11 {
+              font-size: 17px;
+              position: relative;
+              display: inline-block;
+              width: 3.5em;
+              height: 2em;
+              margin-right: 12px;
+            }
+
+            .switch_11 input {
+              opacity: 0;
+              width: 0;
+              height: 0;
+            }
+
+            .slider_11 {
+              position: absolute;
+              cursor: pointer;
+              top: 0;
+              left: 0;
+              right: 0;
+              bottom: 0;
+              background-color: #ccc;
+              -webkit-transition: .4s;
+              transition: .4s;
+              box-shadow: inset 2px 2px 12px -5px gray;
+            }
+
+            .slider_11:before {
+              position: absolute;
+              content: "";
+              height: 2em;
+              width: 1.75em;
+              left: 0;
+              bottom: 0;
+              background-color: white;
+              -webkit-transition: .4s;
+              transition: .4s;
+            }
+
+            .slider-input_11:checked+.slider_11 {
+              background-color: #90EE90;
+              box-shadow: inset 2px 2px 9px -5px gray;
+            }
+
+            .slider-input_11:focus+.slider_11 {
+              box-shadow: 0 0 1px #90EE90;
+            }
+
+            .slider-input_11:checked+.slider_11:before {
+              -webkit-transform: translateX(1.75em);
+              -ms-transform: translateX(1.75em);
+              transform: translateX(1.75em);
+            }
+          </style>
+        </div>
+      </div>
+      <!-- 12th -->
+      <div class="small-square">
+        <div>
+          <label class="switch_12">
+            <input type="checkbox">
+            <div class="slider_12">
+              <span>On</span>
+              <span>Off</span>
+            </div>
+          </label>
+          <style>
+            * {
+              padding: 0;
+              margin: 0;
+              box-sizing: border-box;
+            }
+
+            button {
+              font-family: inherit;
+            }
+
+            /* The switch - the box around the slider */
+            .switch_12 {
+              font-size: 17px;
+              position: relative;
+              display: inline-block;
+              width: 100px;
+              height: 2em;
+            }
+
+
+            /* The slider */
+            .slider_12 {
+              position: absolute;
+              cursor: pointer;
+              top: 0;
+              left: 0;
+              right: 0;
+              bottom: 0;
+              background-color: #fff;
+              color: #000;
+              font-weight: 600;
+              border-radius: 30px;
+              display: flex;
+              justify-content: space-around;
+              align-items: center;
+              transition: .4s;
+            }
+
+            .slider_12:before {
+              position: absolute;
+              content: "On";
+              height: 90%;
+              width: 48%;
+              left: 2%;
+              border-radius: 20px;
+              background-color: white;
+              color: green;
+              display: grid;
+              align-content: center;
+              justify-content: center;
+              box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.2), 0 2px 4px 0 rgba(0, 0, 0, 0.2), 0 -1px 0 0 rgba(0, 0, 0, 0.1) inset, 0 -1.31em 1.31em -1.31em rgba(0, 0, 0, 0.3) inset, 0 0 1px 0 rgba(0, 0, 0, 0.1);
+              text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.15);
+              transition: .4s;
+            }
+
+            .slider_12:after {
+              content: "";
+              position: absolute;
+              top: -7px;
+              left: -7px;
+              right: -7px;
+              bottom: -7px;
+              border-radius: 1.71em;
+              background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.06), rgba(0, 0, 0, 0.1));
+              z-index: -1;
+            }
+
+            .switch_12 input:checked+.slider_12 {
+              background-color: #21f3a3;
+              color: #fff;
+            }
+
+            .switch_12 input:checked+.slider_12:before {
+              content: "Off";
+              transform: translateX(100%);
+              color: red;
+            }
+
+            .switch_12 input {
+              display: none;
+            }
+          </style>
+        </div>
+      </div>
+    </div>
+
+
+
+    <script src="./toggle-switches.js"></script>
+</body>
+
+</html>

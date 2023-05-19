@@ -21,7 +21,7 @@
   <body>
     <header>
       <div class="h-start">
-        <h4>Explore</h4>
+        <h4 onclick="location.href='/Button-page.html'">Explore</h4>
         <h4>Create</h4>
       </div>
       <button class="signin" onclick="signInForm()">Sign in</button>
@@ -29,22 +29,49 @@
     <section class="showcase-button">
       <div id="darken-element" onclick="turnoffFeild()">
     </div>
-      <div id="signInField">
-        <div id="escape-btn" onclick="turnoffFeild()">
-            <i class="fa-solid fa-xmark" onclick="turnoffFeild()"></i>
-        </div>
-        <label for="email"> Email </label>
-        <input type="email" id="Email" placeholder="Email" />
-        <label for="password"> Password </label>
-        <input type="password" id="Password" placeholder="Password" />
-        <button class="Login-btn" type="submit">Sign in</button>
-        <div class="signUpField">
-          <div class="signUpLine">
-            <p>Don't have one ?</p>
-            <a href="" class="GoToSignUpField">Create one</a>
-          </div>
+    <form onsubmit="login()">
+    <div id="signInField">
+      <div id="escape-btn" onclick="turnoffFeild()">
+          <i class="fa-solid fa-xmark" onclick="turnoffFeild()"></i>
+      </div>
+      <label for="email"> Email </label>
+      <input type="email" id="Email" placeholder="Email" />
+      <label for="password"> Password </label>
+      <input type="password" id="Password" placeholder="Password" />
+      <button class="Login-btn" type="submit">Login</button>
+      <div class="signUpField">
+        <div class="signUpLine">
+          <p>Don't have one?</p>
+          <p class="GoToSignUpField" onclick="onsignupField()" >Create one</p>
         </div>
       </div>
+    </div>
+  </form>
+
+
+
+  <form onsubmit="SignUp()">
+    <div id="sign-Up-Field">
+      <div id="escape-btn" onclick="turnoffFeild()">
+          <i class="fa-solid fa-xmark" onclick="turnoffFeild()"></i>
+      </div>
+      <label for="name"> User Name </label>
+      <input type="name" id="Name" placeholder="User name"/>
+      <label for="email"> Email </label>
+      <input type="email" id="SignUpEmail" placeholder="Email" />
+      <label for="password"> Password </label>
+      <input type="password" id="SignUpPassword" placeholder="Password" />
+      <button class="Signup-btn" onclick="SignUp()" type="submit">Sign in</button>
+      <div class="signUpField">
+        <div class="signUpLine">
+          <p>Already have account?</p>
+          <p class="GoToSignUpField" onclick="signInForm()" >Back to login</p>
+        </div>
+      </div>
+    </div>
+  </form>
+
+  
       <div class="aside-wrapper">
         <aside class="element-picks">
             <a class="Element" href="link"" >All</>
@@ -54,6 +81,13 @@
             <a class="Element" href="link">Toggle switches</a>
           </aside>
       </div>
+
+
+<!-- co the cop dc ------------------------------------------------------------ -->
+
+      
+
+
       <section class="button-example">
         <div class="line first">
           <div class="small-square">

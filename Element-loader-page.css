@@ -140,6 +140,29 @@ div#signInField {
 label{
   font-size: 28px;
 }
+
+div#sign-Up-Field{
+  position: absolute;
+  height: 600px;
+  width: 872px;
+  z-index: 7;
+  background: rgb(0, 0, 0);
+  left: 50%;
+  transform: translate(-50%, 0);
+  top: 76px;
+  border-radius: 16px;
+  padding: 32px 20px ;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 24px;
+  color: white;
+  font-family:'Quicksand', sans-serif ;
+  transition: 0.4s ease-in;
+  visibility: hidden;
+}
+
 input#Email{
     padding: 16px 16px;
     width: 426px;
@@ -153,6 +176,45 @@ input#Password{
     border-radius: 32px;
     margin-bottom: 16px;
 }
+
+
+input#Name{
+  padding: 16px 16px;
+    width: 426px;
+    border: none;
+    border-radius: 32px;
+}
+
+
+input#SignUpPassword{
+  padding: 16px 16px;
+    width: 426px;
+    border: none;
+    border-radius: 32px;
+    margin-bottom: 16px;
+}
+
+input#SignUpEmail{
+  padding: 16px 16px;
+  width: 426px;
+  border: none;
+  border-radius: 32px;
+}
+
+button.Signup-btn{
+  padding: 10px 36px;
+  font-size: 24px;
+  border-radius: 32px;
+  font-weight: 400;
+  background-color: #21D4FD;
+background-image: linear-gradient(19deg, #21D4FD 0%, #B721FF 100%);
+color: white;
+font-family: 'Quicksand', sans-serif;
+border: none;
+}
+
+
+
 
 button.Login-btn{
   padding: 10px 36px;
@@ -182,18 +244,14 @@ button.Login-btn:hover{
   z-index: 6;
   cursor: pointer;
   transition: 1s;
-  filter: blur(-100%);
-  -webkit-filter: blur(-100%)
+  backdrop-filter: blur(16px);
+  
 }
 
 div#signInField p{
   font-size: 18px;
 }
-div#signInField a{
-  text-align: center;
-  margin-left: 24px;
-  margin-top: 12px;
-}
+
 .line{
     display: flex;
     gap: 18px;
@@ -218,10 +276,18 @@ div#signInField a{
     cursor: pointer;
 }
 
+.signUpLine p{
+  text-align: center;
+}
+
 .GoToSignUpField{
   text-decoration: none;
   color: rgb(212, 212, 212);
   font-size: 16px;
+}
+
+.GoToSignUpField:hover{
+  cursor: pointer;
 }
 
 .active{
