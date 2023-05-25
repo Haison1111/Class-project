@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Detail-page</title>
+    <link rel="stylesheet" href="./detail-page.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+      integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+    
+</head>
+<body>
+    <header>
+        <div class="h-start">
+          <h4 onclick="location.href='/Button-page.html'">Explore</h4>
+          <h4>Create</h4>
+        </div>
+        <button class="signin" onclick="signInForm()">Sign in</button>
+      </header>
+      <section class="showcase-button">
+        <div id="darken-element" onclick="turnoffFeild()">
+      </div>
+      <form onsubmit="login()">
+      <div id="signInField">
+        <div id="escape-btn" onclick="turnoffFeild()">
+            <i class="fa-solid fa-xmark" onclick="turnoffFeild()"></i>
+        </div>
+        <label for="email"> Email </label>
+        <input type="email" id="Email" placeholder="Email" />
+        <label for="password"> Password </label>
+        <input type="password" id="Password" placeholder="Password" />
+        <button class="Login-btn" type="submit">Login</button>
+        <div class="signUpField">
+          <div class="signUpLine">
+            <p>Don't have one?</p>
+            <p class="GoToSignUpField" onclick="onsignupField()" >Create one</p>
+          </div>
+        </div>
+      </div>
+    </form>
+  
+  
+  
+    <form onsubmit="SignUp()">
+      <div id="sign-Up-Field">
+        <div id="escape-btn" onclick="turnoffFeild()">
+            <i class="fa-solid fa-xmark" onclick="turnoffFeild()"></i>
+        </div>
+        <label for="name"> User Name </label>
+        <input type="name" id="Name" placeholder="User name"/>
+        <label for="email"> Email </label>
+        <input type="email" id="SignUpEmail" placeholder="Email" />
+        <label for="password"> Password </label>
+        <input type="password" id="SignUpPassword" placeholder="Password" />
+        <button class="Signup-btn" onclick="SignUp()" type="submit">Sign in</button>
+        <div class="signUpField">
+          <div class="signUpLine">
+            <p>Already have account?</p>
+            <p class="GoToSignUpField" onclick="signInForm()" >Back to login</p>
+          </div>
+        </div>
+      </div>
+    </form>
+  
+    
+        <div class="aside-wrapper">
+          <aside class="element-picks">
+            <a class="Element" href="/Button-page.html">Button</a>
+            <a class="Element" href="/Checkboxes/checkboxes.html">Checkboxes</a>
+            <a class="Element" href="/Element-loader-page.html">Loader</a>
+            <a class="Element" href="/Toggle Switches/toggle-switches.html">Toggle switches</a>
+            </aside>
+        </div>
+        
+        <section class="Element-content">
+          <div id="Animate"></div>
+          <div class="code-example">
+            <div id="html-btn" onclick="turnOnHtmlField()"> HTML </div>
+            <div id="css-btn" onclick="turnOnCssField()"> CSS </div>
+            <div id="html-code">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nostrum commodi minima officia eaque ipsum odio rem, dolores quo ab, exercitationem tempore, molestias pariatur ratione aliquid! Cupiditate aut repellat assumenda dignissimos animi rem possimus dolorem minus porro? Voluptatum sequi optio doloribus recusandae ullam enim odit sint sunt magni itaque! Debitis deserunt illum asperiores ullam. Sunt, excepturi doloribus. A sequi magnam distinctio, ducimus fugit ipsum! Atque ducimus quibusdam incidunt dignissimos asperiores dolore consequatur, facilis sunt dolores laboriosam repellat tempore placeat esse, sit voluptatum iure aperiam provident odio praesentium laborum magnam voluptatem impedit. Aut nesciunt atque in quas asperiores non impedit libero illum, ab deleniti quod voluptatibus quos, labore praesentium adipisci ducimus maiores blanditiis quibusdam! Harum quisquam fugit, cum nobis perferendis, odit, nesciunt esse iste sequi eligendi quasi totam aperiam. Quis placeat, ullam omnis cupiditate sunt laboriosam suscipit culpa recusandae, quidem aliquid expedita, tenetur nulla! Dolorem, laboriosam natus. Blanditiis tenetur exercitationem assumenda debitis, reprehenderit facilis quo minus delectus totam voluptatibus explicabo neque aperiam voluptates soluta perferendis quidem. Ducimus quos ex debitis sint quidem provident minus in facilis distinctio aut velit corrupti, vitae fuga id corporis qui voluptatem possimus, nam itaque ea repellendus. A quae neque debitis eius vitae omnis blanditiis minima sed ex sint. Fuga corrupti non ut, doloribus maiores architecto excepturi nulla iusto nostrum sint minus laudantium ratione laborum quis labore aliquid possimus, optio eum debitis molestias a delectus totam corporis. Velit repudiandae quo explicabo adipisci magnam temporibus minima saepe repellendus facere fuga voluptate culpa impedit nobis inventore minus incidunt expedita iste reiciendis aspernatur doloribus, accusamus reprehenderit! Veritatis ullam at nam asperiores autem iusto voluptate rerum repellendus provident cumque rem, eum maxime alias dolore sit odio quas esse sint iure molestias dicta, repellat saepe aliquid dolores? Tempora aspernatur minima fugiat alias laudantium! Aliquam sit necessitatibus aperiam ut at ducimus, et vel ea facilis corporis placeat odio voluptatum quos autem molestias eaque ad rem ex! Sunt voluptatibus ea nobis, ut natus labore voluptatum magnam aliquam vitae expedita eos amet adipisci. Deserunt, quod voluptatibus voluptates obcaecati placeat commodi quam accusantium magnam optio nihil officiis ipsa tempore, laudantium ea tempora nostrum mollitia eos possimus totam esse. Sequi aut doloremque illo ab nulla magnam rem maiores dolore expedita eaque culpa tempora dolorem facilis dolorum laudantium fuga perspiciatis velit, dignissimos cumque eligendi totam. Sequi quasi eos molestiae maxime iure libero fugit veritatis quidem non, nisi ipsam corporis eligendi consequatur velit provident omnis beatae nulla eum reprehenderit neque, mollitia suscipit nam! Praesentium quas cumque et? Sequi ex quod reiciendis? Consequuntur numquam corporis consectetur saepe cupiditate magni quidem suscipit nemo nihil perspiciatis dolore molestias recusandae aperiam, error cum similique repellendus facere temporibus iusto sequi, maxime ea itaque animi. Sequi aspernatur temporibus autem maiores tenetur quidem laboriosam adipisci similique modi incidunt asperiores amet nesciunt eius cumque recusandae nulla praesentium porro iusto libero atque, doloribus provident facilis. Debitis assumenda ad quidem quia non. Ducimus tenetur, nobis in sunt sint ea quo officia repellendus. Adipisci expedita enim suscipit odit sit corporis culpa rerum, pariatur deleniti porro magnam aspernatur sint sapiente. Consequuntur, sint.</div>
+            <div id="css-code">CSS</div>
+          </div>
+        </section>
+        
+
+
+        <script src="./Button-page.js"></script>
+</body>
+</html>

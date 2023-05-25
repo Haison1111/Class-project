@@ -284,7 +284,6 @@ div#signInField p{
 
 
 
-
 .line {
     width: 1700px;
     display: inline-grid;
@@ -1942,6 +1941,111 @@ button.explore:active {
   }
 }
 
+@keyframes apeared {
+  from {
+    top: -50%
+  };
+  0% {
+    opacity: 0%;
+  };
+
+  15% {
+    opacity: 15%;
+  }
+  25%{
+    opacity: 30%;
+  }
+  40%{
+    opacity: 40%;
+  }
+  50% {
+    opacity: 50%;
+  };
+  60%{
+    opacity: 60%;
+  }
+  75%{
+    opacity: 75%;
+  }
+  85%{
+    opacity: 85%;
+  }
+  100%{
+    opacity: 100%;
+  };
+}
+
+@keyframes disapear{
+  
+  from{
+    top: 76px;
+  }
+  to {
+    top: -50%;
+  }
+}
+
+/* Responsive */
+
+.close-dialog {
+  width:100%;
+  text-align: end;
+}
+
+.mobile-nav{
+  top: 0;
+  left:0;
+  width: 100%;
+  height: 100%;
+  display:flex;
+  gap:20px;
+  text-align: center;
+  flex-direction: column;
+  background-color: #1d1d1d;
+  /* position:absolute; */
+  display: none;
+  z-index: 99;
+}
+.mobile-nav a{
+  color: white;
+  text-decoration-line: none;
+  @media only screen and (max-width: 768px){ 
+    
+  }
+}
 
 
+@media only screen and (max-width: 768px){
+  .burger-button {
+    visibility: visible;
+  }
+  .signin {
+    display: none;
+  }
+  .content-btn { 
+    grid-template-columns: repeat(1,1fr) !important;
+  }
+  .aside-wrapper {
+    display: none;
+  }
+  input#Email{ 
+    width: 200px;
+  }
+  input#Password{
+    width: 200px;
+  }
+  div#signInField {
+    padding: 0;
+    max-width: 300px;
+  }
+}
+@media only screen and (max-width: 1024px){ 
+  .content-btn { 
+    grid-template-columns: repeat(2,1fr);
+  }
+  
+}
 
+@media only screen and (max-width: 1336px){ 
+ 
+}
