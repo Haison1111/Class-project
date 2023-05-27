@@ -5,11 +5,18 @@
 }
 
 body {
-  /* width: 1440px; */
-  /* height: 1600px; */
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
   font-family: 'Quicksand', sans-serif;
   margin: auto;
   background-color: #1d1d1d;
+  padding-left: 24px;
+  padding-right: 24px;
+}
+
+main {
+  flex: 1; 
 }
 
 header {
@@ -21,6 +28,7 @@ header {
   align-items: center;
   z-index: 100
 }
+
 
 h4 {
   color: white;
@@ -77,7 +85,7 @@ h4:hover {
   cursor: pointer;
 }
 
-.small-square {
+.small-square{
   /* width: 284px; */
   height: 236.3px;
   /* background: #575757; */
@@ -92,6 +100,9 @@ h4:hover {
   justify-content: center;
   transition: 500ms;
   position: relative;
+}
+.small-square:empty {
+  display: none;
 }
 
 /* .small-square::after{
@@ -339,7 +350,7 @@ text-align: center;
   }
 
   .content-btn {
-    grid-template-columns: repeat(1, 1fr) !important;
+    grid-template-columns: repeat(2, 1fr) !important;
   }
 
   .aside-wrapper {
@@ -362,13 +373,90 @@ text-align: center;
 
 @media only screen and (max-width: 1024px) {
   .content-btn {
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(3, 1fr);
   }
 }
 
 
 @media only screen and (min-width: 1336px) {
   .content-btn {
-    grid-template-columns: repeat(6, 1fr);
+    grid-template-columns: repeat(4, 1fr);
   }
+}
+
+
+/* add fav */
+.favorite-button {
+  position: absolute;
+  bottom: 10px;
+  right: 10px;
+  width: 30px;
+  height: 30px;
+  border: none;
+  background-color: transparent;
+  font-size: 20px;
+  cursor:pointer;
+}
+
+.favorite-button:hover .fa-solid{
+  color: black;
+}
+
+/* Footer */
+.footer {
+  background-color: #1e1e1e;
+  color: #ffffff;
+  padding: 40px 0px;
+}
+
+.footer-content {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.footer-section {
+  flex-basis: 25%;
+  padding: 0 30px;
+  margin-bottom: 40px;
+}
+
+.footer-section h3 {
+  font-size: 16px;
+  margin-bottom: 20px;
+}
+
+.footer-section ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.footer-section ul li {
+  margin-bottom: 10px;
+}
+
+.footer-section ul li a {
+  color: #ffffff;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.footer-section ul li a:hover {
+  color: #cccccc;
+}
+
+.footer-social-icons {
+  margin-top: 40px;
+}
+
+.footer-social-icons a {
+  display: inline-block;
+  color: #ffffff;
+  text-decoration: none;
+  margin-right: 10px;
+}
+
+.footer-social-icons a i {
+  font-size: 18px;
 }
