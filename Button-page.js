@@ -1,126 +1,4 @@
-let bigEdata = [
-    { 
-        id : "1",
-        HtmlCode : `<div class="uiverse-tooltip">
-        <span class="tooltip-button">uiverse.io</span>
-        <span> Tooltip </span>
-      </div>`,
-        CssCode : `.uiverse-tooltip {
-            position: relative;
-            background: #ffffff;
-            color: #000;
-            padding: 15px;
-            margin: 10px;
-            border-radius: 10px;
-            width: 150px;
-            height: 50px;
-            font-size: 17px;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            flex-direction: column;
-            box-shadow: 0 10px 10px rgba(0, 0, 0, 0.1);
-            cursor: pointer;
-            transition: all 0.2s cubic-bezier(0.68, -0.55, 0.265, 1.55);
-          }
-          
-          .tooltip-button {
-            position: absolute;
-            top: 0;
-            font-size: 14px;
-            background: #ffffff;
-            color: #ffffff;
-            padding: 5px 8px;
-            border-radius: 5px;
-            box-shadow: 0 10px 10px rgba(0, 0, 0, 0.1);
-            opacity: 0;
-            pointer-events: none;
-            transition: all 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
-          }
-          
-          .tooltip-button::before {
-            position: absolute;
-            content: "";
-            height: 8px;
-            width: 8px;
-            background: #ffffff;
-            bottom: -3px;
-            left: 50%;
-            transform: translate(-50%) rotate(45deg);
-            transition: all 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
-          }
-          
-          .uiverse-tooltip:hover .tooltip-button {
-            top: -45px;
-            opacity: 1;
-            visibility: visible;
-            pointer-events: auto;
-          }
-          
-          svg:hover span,
-          svg:hover .tooltip-button {
-            text-shadow: 0px -1px 0px rgba(0, 0, 0, 0.1);
-          }
-          
-          .uiverse-tooltip:hover,
-          .uiverse-tooltip:hover .tooltip-button,
-          .uiverse-tooltip:hover .tooltip-button::before {
-            background: linear-gradient(320deg, rgb(3, 77, 146), rgb(0, 60, 255));
-            color: #ffffff;
-          }
-        
-          .cta {
-            border: none;
-            background: none;
-          }
-          
-          .cta span {
-            padding-bottom: 7px;
-            letter-spacing: 4px;
-            font-size: 14px;
-            padding-right: 15px;
-            text-transform: uppercase;
-          }
-          
-          .cta svg {
-            transform: translateX(-8px);
-            transition: all 0.3s ease;
-          }
-          
-          .cta:hover svg {
-            transform: translateX(0);
-          }
-          
-          .cta:active svg {
-            transform: scale(0.9);
-          }
-          
-          .hover-underline-animation {
-            position: relative;
-            color: black;
-            padding-bottom: 20px;
-          }
-          
-          .hover-underline-animation:after {
-            content: "";
-            position: absolute;
-            width: 100%;
-            transform: scaleX(0);
-            height: 2px;
-            bottom: 0;
-            left: 0;
-            background-color: #000000;
-            transform-origin: bottom right;
-            transition: transform 0.25s ease-out;
-          }
-          
-          .cta:hover .hover-underline-animation:after {
-            transform: scaleX(1);
-            transform-origin: bottom left;
-          }`,
 
-    }
-];
 // function goToDetail(){
 //     window.location.href= "./detail-page.html";
 // // //     for ( let i=0;i< bigEdata.length;i++){
@@ -132,17 +10,18 @@ let bigEdata = [
 // }
 let params = new URLSearchParams(window.location.search)
 let AnimateView = document.getElementById("Animate")
-let SmallSquareG = document.getElementsByClassName("small-square");
+let SmallSquareG = document.getElementsByClassName("small-square-btn");
 let DataID ;
 for (let i=0;i<SmallSquareG.length;i++) {  
     SmallSquareG[i].setAttribute("data-id" , i + 1 )   
     SmallSquareG[i].addEventListener('click', function goToDetail(){
-        params.set("data-id", SmallSquareG[i].innerHTML )
+        params.set("data-id", SmallSquareG[i].getAttribute("data-id") )
         window.location.href = `./detail-page.html?${params.toString()}`;  
         
     });
-     document.getElementById("Animate").innerHTML = params.get("data-id")
   }
+
+
    
   
 
@@ -170,9 +49,10 @@ function login(){
         SignInSucess = true;
         alert("dang nhap thanh cong")
         window.location.href="./homepage.html"
+        // document.getElementsByClassName("signin").style.display = "none"
     } 
     if (SignInSucess = true){
-        signInBtn.innerHTML = `xin chao ${EmailLogin}`
+        document.getElementsByClassName("signin").innerText = `xin chao ${EmailLogin}`
     } 
 }
 
@@ -181,7 +61,6 @@ function SignUp(){
     const Email = document.getElementById("SignUpEmail").value;
     const Password = document.getElementById("SignUpPassword").value;
     const signInBtn = document.querySelector(".signin")
-    let SignUpSucess = false;
     let existingEmail = false;
     if ( Password.length < 8) {
         alert('vui long nhap pass word du 8 ki tu');
@@ -229,7 +108,18 @@ function SignUp(){
 // }
 
 
+let isClickNavMenu = false
 
+function mobileMenuNav(){
+    isClickNavMenu = !isClickNavMenu
+    if(isClickNavMenu) {
+        // document.getElementById("container").style.display="none"
+        document.getElementById("mobileNav").style.display="flex"
+    } else {
+        // document.getElementById("container").style.display="block"
+        document.getElementById("mobileNav").style.display="none"
+    }
+}
 
 
 
@@ -281,7 +171,7 @@ const NavElements = document.getElementsByClassName('Element')
 const windowPathName = window.location.pathname;
 
 
-for ( let i = 0; i< 5;i++){
+for ( let i = 0; i< 10;i++){
     if ( NavElements[i].href.includes(windowPathName)){
         NavElements[i].classList.replace("Element","active")
     }
@@ -292,15 +182,21 @@ function turnOnHtmlField(){
     document.getElementById("html-code").style.zIndex = "3"
     document.getElementById("css-code").style.zIndex ="-1"
     document.getElementById("css-btn").style.background="black"
-    document.getElementById("html-btn").style.background="#424242"
+    document.getElementById("html-btn").style.background="#f17108"
+    document.getElementById("btn-copy-html").style.zIndex="4"
+    document.getElementById("btn-copy-css").style.zIndex="-2"
 }
 
 function turnOnCssField(){
     document.getElementById("html-code").style.zIndex = "-1"
     document.getElementById("css-code").style.zIndex ="3"
     document.getElementById("html-btn").style.background="black"
-    document.getElementById("css-btn").style.background="#424242"
+    document.getElementById("css-btn").style.background="#008cff"
+    document.getElementById("btn-copy-html").style.zIndex="-2"
+    document.getElementById("btn-copy-css").style.zIndex="4"
 }
+
+ 
 
 // const params = new URLSearchParams(window.location.search)
 // params.get('id')

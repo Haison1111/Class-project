@@ -20,16 +20,31 @@
   </head>
   <body>
     <header>
+      <div class="section-header">
       <div class="h-start">
-        <h4 onclick="location.href='/Button-page.html'">Explore</h4>
-        <h4>Create</h4>
+        <h4 class="logo" onclick="location.href='/homepage.html'"> Shapesite </h4>
+        <h4 class="Explore" onclick="location.href='/Button-page.html'"> Explore </h4> 
       </div>
       <button class="signin" onclick="signInForm()">Sign in</button>
+
+      <div class="burger-button">
+      <i class="fa-solid fa-bars" onclick="mobileMenuNav()" style="color: #ffffff;"></i></path>
+    </div>
+    </div>
     </header>
-    <section class="showcase-button">
+
+
+    <section class="mobile-nav" id="mobileNav">
+      <a class="Element" href="/Button-page.html">Button</a>
+      <a class="Element" href="/Checkboxes/checkboxes.html">Checkboxes</a>
+      <a class="Element" href="/Element-loader-page.html">Loader</a>
+      <a class="Element" href="/Toggle-Switches/toggle-switches.html">Switches</a>
+    </section>
+
+    <!-- <section class="showcase-button"> -->
       <div id="darken-element" onclick="turnoffFeild()">
     </div>
-    <form onsubmit="login()">
+    
     <div id="signInField">
       <div id="escape-btn" onclick="turnoffFeild()">
           <i class="fa-solid fa-xmark" onclick="turnoffFeild()"></i>
@@ -46,7 +61,10 @@
         </div>
       </div>
     </div>
-  </form>
+  
+  
+
+  
 
 
 
@@ -70,32 +88,37 @@
       </div>
     </div>
   </form>
-
+ 
   
+  <main>
+  
+
+    <div class="container container--btn" id="container">
       <div class="aside-wrapper">
         <aside class="element-picks">
           <a class="Element" href="/Button-page.html">Button</a>
           <a class="Element" href="/Checkboxes/checkboxes.html">Checkboxes</a>
           <a class="Element" href="/Element-loader-page.html">Loader</a>
-          <a class="Element" href="/Toggle Switches/toggle-switches.html">Toggle switches</a>
+          <a class="Element" href="/Toggle-Switches/toggle-switches.html"> Switches</a>
+          <a class="Element showcase-button" href="/Add to Favourites/add-to-fav.html">Favorites</a>
           </aside>
       </div>
 
 
-<!-- co the cop dc ------------------------------------------------------------ -->
+     <!-- co the cop dc ------------------------------------------------------------ -->
 
       
 
 
-      <section class="button-example" >
-        <div class="line first">
-          <div class="small-square" >
+    <div class="content content-btn">
+        
+          <div class="small-square-btn" >
             <div class="uiverse-tooltip">
               <span class="tooltip-button">uiverse</span>
               <span> Tooltip </span>
             </div>
           </div>
-          <div class="small-square">
+          <div class="small-square-btn">
             <button class="cta">
               <span class="hover-underline-animation"> Shop now </span>
               <svg
@@ -114,10 +137,14 @@
               </svg>
             </button>
           </div>
-          <div class="small-square">
+
+
+          <div class="small-square-btn">
             <button class="stack-btn">Button</button>
           </div>
-          <div class="small-square">
+
+
+          <div class="small-square-btn">
             <button class="drop-btn" alt="tony stark">
               <i>t</i>
               <i>o</i>
@@ -131,15 +158,15 @@
               <i>k</i>
             </button>
           </div>
-        </div>
-        <div class="line second">
-          <div class="small-square">
+        
+        
+          <div class="small-square-btn">
             <button class="btn-watch">Watch</button>
           </div>
-          <div class="small-square">
+          <div class="small-square-btn">
             <button class="shake">Shake</button>
           </div>
-          <div class="small-square">
+          <div class="small-square-btn">
             <div class="button-hover">
               <div class="box-fall">H</div>
               <div class="box-fall">O</div>
@@ -148,12 +175,13 @@
               <div class="box-fall">R</div>
             </div>
           </div>
-          <div class="small-square">
+
+          <div class="small-square-btn">
             <button class="learn-more">Learn More</button>
           </div>
-        </div>
-        <div class="line third">
-          <div class="small-square">
+        
+  
+          <div class="small-square-btn">
             <div class="buttons">
               <button class="btn">
                 <span></span>
@@ -165,7 +193,8 @@
               </button>
             </div>
           </div>
-          <div class="small-square">
+
+          <div class="small-square-btn">
             <button class="social">
               <span>Share</span>
               <div class="container-btn">
@@ -211,7 +240,9 @@
               </div>
             </button>
           </div>
-          <div class="small-square">
+
+
+          <div class="small-square-btn">
             <div class="container-button">
               <div class="hover bt-1"></div>
               <div class="hover bt-2"></div>
@@ -222,7 +253,9 @@
               <button class="clicked-btn"></button>
             </div>
           </div>
-          <div class="small-square">
+
+
+          <div class="small-square-btn">
             <ul class="wrapper-btn-social">
               <li class="icon-social facebook">
                 <span class="tooltip-social">Facebook</span>
@@ -238,9 +271,9 @@
               </li>
             </ul>
           </div>
-        </div>
-        <div class="line fourth">
-          <div class="small-square">
+        
+        
+          <!-- <div class="small-square-btn">
             <button class="cssbuttons-io">
               <span
                 ><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
@@ -254,7 +287,8 @@
               >
             </button>
           </div>
-          <div class="small-square">
+
+          <div class="small-square-btn">
             <button class="amongus">
               <svg
                 height="36px"
@@ -300,7 +334,9 @@
               <span class="play">play</span>
             </button>
           </div>
-          <div class="small-square">
+
+
+          <div class="small-square-btn">
             <button data-text="Awesome" class="button-univers">
               <span class="actual-text">&nbsp;universe&nbsp;</span>
               <span class="hover-text" aria-hidden="true"
@@ -308,12 +344,39 @@
               >
             </button>
           </div>
-          <div class="small-square">
+
+          <div class="small-square-btn">
             <a href="#" class="btn"> Click Me</a>
           </div>
+        </div> -->
+
+
+
+    </main>
+
+    <footer class="footer">
+      <div class="footer-content">
+        <div class="footer-section">
+          <h3>About</h3>
+          <ul>
+            <li><a href="#">About Us</a></li>
+            <li><a href="#">Team</a></li>
+            <li><a href="#">Careers</a></li>
+          </ul>
         </div>
-      </section>
-    </section>
+  
+        <div class="footer-section">
+          <h3>Follow Us</h3>
+          <div class="footer-social-icons">
+            <a href="#"><i class="fab fa-twitter"></i></a>
+            <a href="#"><i class="fab fa-facebook-f"></i></a>
+            <a href="#"><i class="fab fa-linkedin-in"></i></a>
+            <a href="#"><i class="fab fa-instagram"></i></a>
+          </div>
+        </div>
+      </div>
+    </footer>
+
     <script src="./Button-page.js"></script>
   </body>
 </html>

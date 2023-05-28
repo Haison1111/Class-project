@@ -4,15 +4,16 @@ const SmallSquare = [
     }
 ]
 
-// const NavElements = document.getElementsByClassName('Element')
-// const windowPathName = window.location.pathname;
+const NavElements = document.getElementsByClassName('Element')
+const windowPathName = window.location.pathname;
 
-// for ( let i = 0; i< 5;i++){
-//     if ( NavElements[i].href.includes(windowPathName)){
-//         NavElements[i].classList.replace("Element","active")
-//     }
-// }
-// var isClickNavMenu = false
+
+for ( var i = 0; i< 5;i++){
+    if ( NavElements[i].href.includes(windowPathName)){
+        NavElements[i].classList.replace("Element","active")
+    }
+}
+var isClickNavMenu = false
 
 
 
@@ -39,29 +40,16 @@ function turnoffFeild(){
     document.getElementById("darken-element").style.display = "none"
 }
 
-// function mobileMenuNav(){
-//     isClickNavMenu = !isClickNavMenu
-//     if(isClickNavMenu) {
-//         document.getElementById("container").style.display="none"
-//         document.getElementById("mobileNav").style.display="flex"
-//     } else {
-//         document.getElementById("container").style.display="block"
-//         document.getElementById("mobileNav").style.display="none"
-//     }
-// }
-
-
-let paramsCk = new URLSearchParams(window.location.search)
-let SmallSquareCk = document.getElementsByClassName("small-square-chck");
-for (let i=0;i<SmallSquareCk.length;i++) {  
-    SmallSquareCk[i].setAttribute("data-ck" , i + 1 )   
-    SmallSquareCk[i].addEventListener('click', function goToDetail(){
-        paramsCk.set("data-ck", SmallSquareCk[i].getAttribute("data-ck") )
-        window.location.href = `/detail-page.html?${paramsCk.toString()}`;  
-        
-    });
+function mobileMenuNav(){
+    isClickNavMenu = !isClickNavMenu
+    if(isClickNavMenu) {
+        document.getElementById("container").style.display="none"
+        document.getElementById("mobileNav").style.display="flex"
+    } else {
+        document.getElementById("container").style.display="block"
+        document.getElementById("mobileNav").style.display="none"
+    }
 }
-
 
 
 // -------------------------ADD TO FAVORITES------------------
@@ -158,3 +146,4 @@ var toggleButton12 = document.getElementById('toggleButton12');
 toggleButton12.addEventListener('click', function() {
   toggleCopy('itemToCopy12');
 });
+

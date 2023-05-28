@@ -5,11 +5,23 @@
 }
 
 body {
-  /* width: 1440px; */
-  /* height: 1600px; */
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
   font-family: 'Quicksand', sans-serif;
   margin: auto;
   background-color: #1d1d1d;
+  padding-left: 64px;
+  padding-right: 64px;
+}
+
+@font-face {
+  font-family: 'TheShapeOfThings';
+  src: url(/TheShapeOfThings-z2E0.ttf);
+}
+
+main {
+  flex: 1; 
 }
 
 header {
@@ -19,29 +31,54 @@ header {
   height: 80px;
   justify-content: space-between;
   align-items: center;
-  z-index: 100
+  z-index: 1;
 }
 
-h4 {
+
+h4{
   color: white;
   font-size: 28px;
   transition: 400ms ease-in;
 }
-
-.h-start {
+h4.logo{
+  font-family:'TheShapeOfThings',sans-serif ;
+  font-size: 20px;
+  background-color: #21D4FD;
+background-image: linear-gradient(19deg, #21D4FD 0%, #B721FF 100%);
+color: transparent;
+-webkit-background-clip: text;
+cursor: pointer;
+}
+h4.logo:hover{
+  font-size: 22px;
+}
+.h-start{
   display: flex;
   justify-content: start;
   gap: 24px;
   align-items: center;
 }
 
+h4:hover{
+  font-size: 32px;
+  transition: 400ms ease-out ;
+  cursor: pointer;
+}
+
+.fa-solid{
+  color: white;
+  font-size: 32px;
+  /* background-color: white; */
+  /* margin-left: 768px; */
+}
+
 .burger-button {
-  position: absolute;
+  /* position: absolute;
   top: 23px;
-  right: 20px;
+  right: 20px; */
   padding-left: 15px;
   padding-right: 15px;
-  visibility: hidden;
+  display: none;
 }
 
 .section-header {
@@ -77,7 +114,7 @@ h4:hover {
   cursor: pointer;
 }
 
-.small-square {
+.small-square-tsw{
   /* width: 284px; */
   height: 236.3px;
   /* background: #575757; */
@@ -93,15 +130,18 @@ h4:hover {
   transition: 500ms;
   position: relative;
 }
+.small-square-tsw:empty {
+  display: none;
+}
 
-/* .small-square::after{
+/* .small-square-tsw::after{
   position: absolute;
   content: "200";
   right: 12px;
   bottom: 0;
 
 } */
-.small-square:hover {
+.small-square-tsw:hover {
   background-color: #21D4FD;
   background-image: linear-gradient(19deg, #21D4FD 0%, #B721FF 100%);
   cursor: pointer;
@@ -150,6 +190,7 @@ div#signInField {
   font-family: 'Quicksand', sans-serif;
   transition: 0.4s ease-in;
   visibility: hidden;
+  width: 872px;
 }
 
 
@@ -159,12 +200,6 @@ div#signInField {
   -webkit-background-clip: text;
 } */
 
-.fa-solid {
-  color: white;
-  font-size: 32px;
-  /* background-color: white; */
-  /* margin-left: 768px; */
-}
 
 .fa-solid:hover {
   cursor: pointer;
@@ -218,15 +253,14 @@ button.Login-btn:hover {
   z-index: 6;
   cursor: pointer;
   transition: 1s;
-  filter: blur(-100%);
-  -webkit-filter: blur(-100%)
+  backdrop-filter: blur(16px);
 }
 
 div#signInField p {
   font-size: 18px;
 }
 
-div#signInField a {
+div#signInField  {
   text-align: center;
   margin-left: 24px;
   margin-top: 12px;
@@ -251,7 +285,7 @@ div#signInField a {
   background-image: linear-gradient(115deg, #5ae0ff 0%, #b61eff 52%, #71d2aa 90%);
   color: transparent;
   -webkit-background-clip: text;
-  font-size: 34px;
+  font-size: 32px;
   font-weight: 700;
   text-decoration: none;
 
@@ -272,10 +306,89 @@ div#signInField a {
   color: transparent;
   z-index: 10;
   transition: 0.3s;
-  font-size: 34px;
+  /* font-size: 34px; */
   cursor: pointer;
 }
 
+
+div#sign-Up-Field{
+  position: absolute;
+  height: 600px;
+  width: 872px;
+  z-index: 7;
+  background: rgb(0, 0, 0);
+  left: 50%;
+  transform: translate(-50%, 0);
+  top: 76px;
+  border-radius: 16px;
+  padding: 32px 20px ;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 24px;
+  color: white;
+  font-family:'Quicksand', sans-serif ;
+  transition: 0.4s ease-in;
+  visibility: hidden;
+}
+
+
+
+input#Name{
+  padding: 16px 16px;
+    width: 426px;
+    border: none;
+    border-radius: 32px;
+}
+
+
+input#SignUpPassword{
+  padding: 16px 16px;
+    width: 426px;
+    border: none;
+    border-radius: 32px;
+    margin-bottom: 16px;
+}
+
+input#SignUpEmail{
+  padding: 16px 16px;
+  width: 426px;
+  border: none;
+  border-radius: 32px;
+}
+
+
+button.Signup-btn{
+  padding: 10px 36px;
+  font-size: 24px;
+  border-radius: 32px;
+  font-weight: 400;
+  background-color: #21D4FD;
+background-image: linear-gradient(19deg, #21D4FD 0%, #B721FF 100%);
+color: white;
+font-family: 'Quicksand', sans-serif;
+border: none;
+}
+
+.signUpLine p{
+  text-align: center;
+}
+
+.GoToSignUpField{
+  text-decoration: none;
+  color: rgb(212, 212, 212);
+  font-size: 16px;
+}
+
+.GoToSignUpField:hover{
+  cursor: pointer;
+}
+
+
+/* .fa-solid.fa-heart.fa-sm{
+  
+} */
 /* .Element.active{
 background-color: #21D4FD;
 background-image: linear-gradient(19deg, #21D4FD 0%, #B721FF 100%);
@@ -295,10 +408,13 @@ text-align: center;
   grid-template-columns: repeat(4, 1fr);
   gap: 20px;
   width: 100%;
+  margin-left: 36px;
+  padding-left: 36px;
 }
 
 .container--btn {
   display: flex;
+  margin-top: 48px;
 }
 
 .close-dialog {
@@ -330,21 +446,35 @@ text-align: center;
 
 
 @media only screen and (max-width: 768px) {
-  .burger-button {
-    visibility: visible;
+  .container--btn{
+    margin-top: 24px;
   }
-
+  .burger-button {
+    display: block;
+  }
+  body{
+    margin: 12px;
+    padding: 12px;
+  }
+  
   .signin {
+    display: none;
+  }
+  
+  h4.Explore{
     display: none;
   }
 
   .content-btn {
-    grid-template-columns: repeat(1, 1fr) !important;
+    grid-template-columns: repeat(2, 1fr) !important;
+    margin: 0;
+    padding: 0;
   }
 
   .aside-wrapper {
     display: none;
   }
+  
 
   input#Email {
     width: 200px;
@@ -362,13 +492,152 @@ text-align: center;
 
 @media only screen and (max-width: 1024px) {
   .content-btn {
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(3, 1fr);
+    margin: 0;
+    padding: 0;
+  }
+
+  .container--btn{
+    margin-top: 24px;
+  }
+  body{
+    margin: auto;
+    padding: auto;
+  }
+  .Explore{
+    display: none;
   }
 }
 
 
 @media only screen and (min-width: 1336px) {
   .content-btn {
-    grid-template-columns: repeat(6, 1fr);
+    grid-template-columns: repeat(4, 1fr);
+    /* margin: 0;
+    padding: 0; */
+  }
+  .container--btn{
+    margin-top: 24px;
+  }
+}
+
+
+/* add fav */
+.favorite-button {
+  position: absolute;
+  bottom: 10px;
+  right: 10px;
+  width: 30px;
+  height: 30px;
+  border: none;
+  background-color: transparent;
+  font-size: 20px;
+  cursor:pointer;
+}
+
+.favorite-button:hover .fa-solid{
+  color: black;
+}
+
+/* Footer */
+.footer {
+  background-color: #1e1e1e;
+  color: #ffffff;
+  padding: 40px 0px;
+}
+
+.footer-content {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.footer-section {
+  flex-basis: 25%;
+  padding: 0 30px;
+  margin-bottom: 40px;
+}
+
+.footer-section h3 {
+  font-size: 16px;
+  margin-bottom: 20px;
+}
+
+.footer-section ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.footer-section ul li {
+  margin-bottom: 10px;
+}
+
+.footer-section ul li a {
+  color: #ffffff;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.footer-section ul li a:hover {
+  color: #cccccc;
+}
+
+.footer-social-icons {
+  margin-top: 40px;
+}
+
+.footer-social-icons a {
+  display: inline-block;
+  color: #ffffff;
+  text-decoration: none;
+  margin-right: 10px;
+}
+
+.footer-social-icons a i {
+  font-size: 18px;
+}
+
+@keyframes apeared {
+  from {
+    top: -50%
+  };
+  0% {
+    opacity: 0%;
+  };
+
+  15% {
+    opacity: 15%;
+  }
+  25%{
+    opacity: 30%;
+  }
+  40%{
+    opacity: 40%;
+  }
+  50% {
+    opacity: 50%;
+  };
+  60%{
+    opacity: 60%;
+  }
+  75%{
+    opacity: 75%;
+  }
+  85%{
+    opacity: 85%;
+  }
+  100%{
+    opacity: 100%;
+  };
+}
+
+@keyframes disapear{
+  
+  from{
+    top: 76px;
+  }
+  to {
+    top: -50%;
   }
 }

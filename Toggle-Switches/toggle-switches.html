@@ -21,54 +21,87 @@
   <header>
     <div class="section-header">
       <div class="h-start">
-        <h4>Explore</h4>
-        <h4>Create</h4>
+        <h4 class="logo" onclick="location.href='/homepage.html'"> Shapesite </h4>
+        <h4 onclick="location.href='/Button-page.html'"> Explore </h4> 
       </div>
       <button class="signin" onclick="signInForm()">Sign in</button>
+      
       <div class="burger-button">
         <i class="fa-solid fa-bars" onclick="mobileMenuNav()" style="color: #ffffff;"></i></path>
       </div>
     </div>
   </header>
   <section class="mobile-nav" id="mobileNav">
-    <a class="link" href="/Button-page.html">Button</a>
-    <a class="link" href="/Checkboxes/checkboxes.html">Checkboxes</a>
-    <a class="link" href="/Element-loader-page.html">Loader</a>
-    <a class="link" href="/Toggle Switches/toggle-switches.html">Toggle switches</a>
-  </section>
-  <section class="showcase-button">
-    <div id="darken-element" onclick="turnoffFeild()">
-    </div>
-    <div id="signInField">
-      <div id="escape-btn" onclick="turnoffFeild()" class="close-dialog">
-        <i class="fa-solid fa-xmark" onclick="turnoffFeild()"></i>
-      </div>
-      <label for="email"> Email </label>
-      <input type="email" id="Email" placeholder="Email" />
-      <label for="password"> Password </label>
-      <input type="password" id="Password" placeholder="Password" />
-      <button class="Login-btn" type="submit">Sign in</button>
-      <div class="signUpField">
-        <div class="signUpLine">
-          <p>Don't have one ?</p>
-          <a href="" class="GoToSignUpField">Create one</a>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <div class="container container--btn" id="container">
-    <div class="aside-wrapper">
-      <aside class="element-picks">
     <a class="Element" href="/Button-page.html">Button</a>
     <a class="Element" href="/Checkboxes/checkboxes.html">Checkboxes</a>
     <a class="Element" href="/Element-loader-page.html">Loader</a>
-    <a class="Element" href="/Toggle Switches/toggle-switches.html">Toggle switches</a>
+    <a class="Element" href="/Toggle-Switches/toggle-switches.html">Toggle switches</a>
+  </section>
+
+
+
+  
+    <div id="darken-element" onclick="turnoffFeild()">
+    </div>
+    <form onsubmit="login()">
+      <div id="signInField">
+        <div id="escape-btn" onclick="turnoffFeild()">
+            <i class="fa-solid fa-xmark" onclick="turnoffFeild()"></i>
+        </div>
+        <label for="email"> Email </label>
+        <input type="email" id="Email" placeholder="Email" />
+        <label for="password"> Password </label>
+        <input type="password" id="Password" placeholder="Password" />
+        <button class="Login-btn" onclick="login()" type="submit">Sign in</button>
+        <div class="signUpField">
+          <div class="signUpLine">
+            <p>Don't have one?</p>
+            <p class="GoToSignUpField" onclick="onsignupField()" >Create one</p>
+          </div>
+        </div>
+      </div>
+    </form>
+  
+    
+  
+    <form onsubmit="SignUp()">
+      <div id="sign-Up-Field">
+        <div id="escape-btn" onclick="turnoffFeild()">
+            <i class="fa-solid fa-xmark" onclick="turnoffFeild()"></i>
+        </div>
+        <label for="name"> User Name </label>
+        <input type="name" id="Name" placeholder="User name"/>
+        <label for="email"> Email </label>
+        <input type="email" id="SignUpEmail" placeholder="Email" />
+        <label for="password"> Password </label>
+        <input type="password" id="SignUpPassword" placeholder="Password" />
+        <button class="Signup-btn" onclick="SignUp()" type="submit">Sign in</button>
+        <div class="signUpField">
+          <div class="signUpLine">
+            <p>Already have account?</p>
+            <p class="GoToSignUpField" onclick="signInForm()" >Back to login</p>
+          </div>
+        </div>
+      </div>
+    </form>
+  
+
+   <main>
+
+   <div class="container container--btn" id="container">
+    <div class="aside-wrapper">
+
+      <aside class="element-picks">
+        <a class="Element" href="/Button-page.html">Button</a>
+        <a class="Element" href="/Checkboxes/checkboxes.html">Checkboxes</a>
+        <a class="Element" href="/Element-loader-page.html">Loader</a>
+        <a class="Element" href="/Toggle-Switches/toggle-switches.html"> Switches</a>
+        <a class="Element showcase-button" href="/Add to Favourites/add-to-fav.html">Favorites</a>
       </aside>
     </div>
     <div class="content content-btn">
       <!-- 1st -->
-      <div class="small-square">
+      <div class="small-square-tsw">
         <div>
           <label class="switch_1">
             <input type="checkbox">
@@ -167,7 +200,7 @@
         </div>
       </div>
       <!-- 2nd -->
-      <div class="small-square">
+      <div class="small-square-tsw">
         <div>
           <label class="switch_2">
             <input type="checkbox">
@@ -243,7 +276,7 @@
         </div>
       </div>
       <!-- 3rd -->
-      <div class="small-square">
+      <div class="small-square-tsw">
         <div>
           <label>
             <input class="toggle-checkbox_3" type="checkbox">
@@ -355,7 +388,7 @@
         </div>
       </div>
       <!-- 4th -->
-      <div class="small-square">
+      <div class="small-square-tsw">
         <div>
           <label class="switch_4">
             <input type="checkbox">
@@ -427,7 +460,7 @@
         </div>
       </div>
       <!-- 5th -->
-      <div class="small-square">
+      <div class="small-square-tsw">
         <div>
           <input class="switch_5" type="checkbox">
           <style>
@@ -481,7 +514,7 @@
         </div>
       </div>
       <!-- 6th -->
-      <div class="small-square">
+      <div class="small-square-tsw">
         <div>
           <label class="switch_6">
             <input type="checkbox">
@@ -571,7 +604,7 @@
         </div>
       </div>
       <!-- 7th -->
-      <div class="small-square">
+      <div class="small-square-tsw">
         <div>
           <label class="switch_7">
             <input class="chk_7" type="checkbox">
@@ -645,7 +678,7 @@
         </div>
       </div>
       <!-- 8th -->
-      <div class="small-square">
+      <div class="small-square-tsw">
         <div>
           <input id="toggle_checkbox_8" type="checkbox">
           <label for="toggle_checkbox_8"></label>
@@ -724,7 +757,7 @@
         </div>
       </div>
       <!-- 9th -->
-      <div class="small-square">
+      <div class="small-square-tsw">
         <div>
           <label class="switch_9">
             <input type="checkbox">
@@ -802,7 +835,7 @@
         </div>
       </div>
       <!-- 10th -->
-      <div class="small-square">
+      <div class="small-square-tsw">
         <div>
           <input type="checkbox" class="plus-minus">
           <style>
@@ -923,7 +956,7 @@
         </div>
       </div>
       <!-- 11th -->
-      <div class="small-square">
+      <div class="small-square-tsw">
         <div>
           <label class="switch_11">
             <input type="checkbox" class="slider-input_11">
@@ -998,7 +1031,7 @@
         </div>
       </div>
       <!-- 12th -->
-      <div class="small-square">
+      <div class="small-square-tsw">
         <div>
           <label class="switch_12">
             <input type="checkbox">
@@ -1093,10 +1126,35 @@
         </div>
       </div>
     </div>
+   
+   </main>
 
+    <footer class="footer">
+      <div class="footer-content">
+        <div class="footer-section">
+          <h3>About</h3>
+          <ul>
+            <li><a href="#">About Us</a></li>
+            <li><a href="#">Team</a></li>
+            <li><a href="#">Careers</a></li>
+          </ul>
+        </div>
+  
+        <div class="footer-section">
+          <h3>Follow Us</h3>
+          <div class="footer-social-icons">
+            <a href="#"><i class="fab fa-twitter"></i></a>
+            <a href="#"><i class="fab fa-facebook-f"></i></a>
+            <a href="#"><i class="fab fa-linkedin-in"></i></a>
+            <a href="#"><i class="fab fa-instagram"></i></a>
+          </div>
+        </div>
+      </div>
+    </footer>
 
-
-    <script src="Button-page.js"></script>
+  
+    <script src="./toggle-switches.js"></script>
+    <script src="/Button-page.js"></script>
 </body>
 
 </html>

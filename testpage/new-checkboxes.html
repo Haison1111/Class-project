@@ -6,7 +6,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>checkboxes</title>
-  <link rel="stylesheet" href="./checkboxes.css" />
+  <link rel="stylesheet" href="./new-checkboxes.css" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
     integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
     crossorigin="anonymous" referrerpolicy="no-referrer" />
@@ -21,11 +21,10 @@
   <header>
     <div class="section-header">
       <div class="h-start">
-        <h4 class="logo" onclick="location.href='/homepage.html'"> Shapesite </h4>
-        <h4 class="Explore" onclick="location.href='/Button-page.html'"> Explore </h4> 
+        <h4>Explore</h4>
+        <h4>Create</h4>
       </div>
       <button class="signin" onclick="signInForm()">Sign in</button>
-
       <div class="burger-button">
         <i class="fa-solid fa-bars" onclick="mobileMenuNav()" style="color: #ffffff;"></i></path>
       </div>
@@ -33,14 +32,13 @@
   </header>
 
   <section class="mobile-nav" id="mobileNav">
-    <a class="Element" href="/Button-page.html">Button</a>
-    <a class="Element" href="/Checkboxes/checkboxes.html">Checkboxes</a>
-    <a class="Element" href="/Element-loader-page.html">Loader</a>
-    <a class="Element" href="/Toggle-Switches/toggle-switches.html">Switches</a>
+    <a class="link" href="link">All</a>
+    <a class="link" href="/Button-page.html">Button</a>
+    <a class="link" href="/link">Checkboxes</a>
+    <a class="link" href="/Element-loader-page.html">Loader</a>
+    <a class="link" href="/link">Toggle switches</a>
   </section>
-
-
-  
+  <section class="showcase-button">
     <div id="darken-element" onclick="turnoffFeild()">
     </div>
     <div id="signInField">
@@ -51,55 +49,34 @@
       <input type="email" id="Email" placeholder="Email" />
       <label for="password"> Password </label>
       <input type="password" id="Password" placeholder="Password" />
-      <button class="Login-btn" onclick="login()">Sign in</button>
+      <button class="Login-btn" type="submit">Sign in</button>
       <div class="signUpField">
         <div class="signUpLine">
           <p>Don't have one ?</p>
-          <p class="GoToSignUpField" onclick="onsignupField()">Create one</p>
+          <a href="" class="GoToSignUpField">Create one</a>
         </div>
       </div>
     </div>
-  
-
-
-  <form onsubmit="SignUp()">
-    <div id="sign-Up-Field">
-      <div id="escape-btn" onclick="turnoffFeild()">
-          <i class="fa-solid fa-xmark" onclick="turnoffFeild()"></i>
-      </div>
-      <label for="name"> User Name </label>
-      <input type="name" id="Name" placeholder="User name"/>
-      <label for="email"> Email </label>
-      <input type="email" id="SignUpEmail" placeholder="Email" />
-      <label for="password"> Password </label>
-      <input type="password" id="SignUpPassword" placeholder="Password" />
-      <button class="Signup-btn" onclick="SignUp()" type="submit">Sign in</button>
-      <div class="signUpField">
-        <div class="signUpLine">
-          <p>Already have account?</p>
-          <p class="GoToSignUpField" onclick="signInForm()" >Back to login</p>
-        </div>
-      </div>
-    </div>
-  </form>
+  </section>
 
 
   <main>
-    
+
     <div class="container container--btn" id="container">
       <div class="aside-wrapper">
         <aside class="element-picks">
+          <a class="Element" href="link">All</a>
           <a class="Element" href="/Button-page.html">Button</a>
-        <a class="Element" href="/Checkboxes/checkboxes.html">Checkboxes</a>
-        <a class="Element" href="/Element-loader-page.html">Loader</a>
-        <a class="Element" href="/Toggle-Switches/toggle-switches.html"> Switches</a>
+          <a class="Element" href="/link">Checkboxes</a>
+          <a class="Element" href="/Element-loader-page.html">Loader</a>
+          <a class="Element" href="/link">Toggle switches</a>
           <a class="Element showcase-button" href="/Add to Favourites/add-to-fav.html">Favorites</a>
         </aside>
       </div>
 
       <div class="content content-btn">
         <!-- 1st -->
-        <div class="small-square-chck" id="itemToCopy1">
+        <div class="small-square" id="itemToCopy1">
           <div>
             <div class="checkbox-apple">
               <input class="yep" id="check-apple" type="checkbox">
@@ -183,7 +160,7 @@
           </div>
         </div>
         <!-- 2nd -->
-        <div class="small-square-chck" id="itemToCopy2">
+        <div class="small-square" id="itemToCopy2">
           <div>
             <label class="container_2">
               <input checked="checked" type="checkbox">
@@ -266,7 +243,7 @@
           </div>
         </div>
         <!-- 3rd -->
-        <div class="small-square-chck" id="itemToCopy3">
+        <div class="small-square" id="itemToCopy3">
           <div>
             <label class="container_3">
               <input checked="checked" type="checkbox">
@@ -347,7 +324,7 @@
           </div>
         </div>
         <!-- 4th -->
-        <div class="small-square-chck" id="itemToCopy4">
+        <div class="small-square" id="itemToCopy4">
           <div>
             <label class="burger_4" for="burger_4">
               <input type="checkbox" id="burger_4">
@@ -433,7 +410,7 @@
           </div>
         </div>
         <!-- 5th -->
-        <div class="small-square-chck" id="itemToCopy5">
+        <div class="small-square" id="itemToCopy5">
           <div>
             <input id="inpLock" type="checkbox">
             <label class="btn-lock_5" for="inpLock">
@@ -557,7 +534,7 @@
           </div>
         </div>
         <!-- 6th -->
-        <div class="small-square-chck" id="itemToCopy6">
+        <div class="small-square" id="itemToCopy6">
           <div>
             <label class="container_6">
               <input checked="checked" type="checkbox">
@@ -654,7 +631,7 @@
           </div>
         </div>
         <!-- 7th -->
-        <div class="small-square-chck" id="itemToCopy7">
+        <div class="small-square" id="itemToCopy7">
           <div>
             <input id="toggle-heart_7" type="checkbox">
             <label for="toggle-heart_7" aria-label="like">❤</label>
@@ -779,7 +756,7 @@
           </div>
         </div>
         <!-- 8th -->
-        <div class="small-square-chck" id="itemToCopy8">
+        <div class="small-square" id="itemToCopy8">
           <div>
             <div class="checkbox-wrapper-31">
               <input checked="" type="checkbox">
@@ -875,7 +852,7 @@
           </div>
         </div>
         <!-- 9th -->
-        <div class="small-square-chck" id="itemToCopy9">
+        <div class="small-square" id="itemToCopy9">
           <div>
             <div class="checkbox-wrapper-19">
               <input id="cbtest-19" type="checkbox">
@@ -1066,7 +1043,7 @@
           </div>
         </div>
         <!-- 10th -->
-        <div class="small-square-chck" id="itemToCopy10">
+        <div class="small-square" id="itemToCopy10">
           <div>
             <div class="check_container">
               <input id="checkbox" class="hidden" type="checkbox">
@@ -1134,7 +1111,7 @@
           </div>
         </div>
         <!-- 11th -->
-        <div class="small-square-chck" id="itemToCopy11">
+        <div class="small-square" id="itemToCopy11">
           <div>
             <label class="container_11">
               <input type="checkbox">
@@ -1199,7 +1176,7 @@
           </div>
         </div>
         <!-- 12th -->
-        <div class="small-square-chck" id="itemToCopy12">
+        <div class="small-square" id="itemToCopy12">
           <div>
             <label class="checkbox_12">
               <input type="checkbox">
@@ -1282,7 +1259,6 @@
           </div>
         </div>
       </div>
-    </div>
   </main>
 
   <footer class="footer">

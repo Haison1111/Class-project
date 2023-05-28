@@ -3,12 +3,18 @@
     padding: 0;
     box-sizing: border-box;
 }
+
+@font-face {
+  font-family: 'TheShapeOfThings';
+  src: url(./TheShapeOfThings-z2E0.ttf);
+}
 body{
-    width: 100%;
+    width: 1840px;
     height: 100%;
     font-family: 'Quicksand', sans-serif;
     margin: auto;
     background-color: #1d1d1d;
+    overflow-x: hidden;
 }
 header{
   color: white;
@@ -18,11 +24,23 @@ header{
   justify-content: space-between;
   align-items: center;
   margin: auto;
+  padding: 0px 48px;
 }
 h4{
   color: white;
   font-size: 28px;
   transition: 400ms ease-in;
+}
+h4.logo{
+  font-family:'TheShapeOfThings',sans-serif ;
+  font-size: 20px;
+  background-color: #21D4FD;
+background-image: linear-gradient(19deg, #21D4FD 0%, #B721FF 100%);
+color: transparent;
+-webkit-background-clip: text
+}
+h4.logo:hover{
+  font-size: 22px;
 }
 .h-start{
   display: flex;
@@ -66,15 +84,16 @@ section.hero {
 h1 {
     background-color: #5ae0ff;
     background-image: linear-gradient(115deg, #5ae0ff 0%, #b61eff 52%, #71d2aa 90%);
-    font-size: 72px;
+    font-size: 48px;
     -webkit-background-clip: text;
     color: transparent;
     z-index: 3;
     transition: 1.1s ease-in;
+    font-family: 'Quicksand',sans-serif;
 }
 
 h1:hover{
-  font-size: 82px;
+  font-size: 64px;
   transition: 1200ms ease-out;
   cursor: none;
 }
@@ -127,7 +146,7 @@ h3 {
 section.hero-image {
     width: 1800px;
     height: 774px;
-    /* text-align: center; */
+    text-align: center;
     /* display: flex;
     flex-direction: row;
     justify-content: center;
