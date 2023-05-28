@@ -21,9 +21,9 @@
     <header>
         <div class="section-header">
             <div class="h-start">
-                <h4>Explore</h4>
-                <h4>Create</h4>
-            </div>
+                <h4 class="logo" onclick="location.href='/homepage.html'"> Shapesite </h4>
+                <h4 class="Explore" onclick="location.href='/Button-page.html'"> Explore </h4> 
+              </div>
             <button class="signin" onclick="signInForm()">Sign in</button>
             <div class="burger-button">
                 <i class="fa-solid fa-bars" onclick="mobileMenuNav()" style="color: #ffffff;"></i></path>
@@ -53,10 +53,32 @@
             <div class="signUpField">
                 <div class="signUpLine">
                     <p>Don't have one ?</p>
-                    <a href="" class="GoToSignUpField">Create one</a>
+                    <p class="GoToSignUpField" onclick="onsignupField()" >Create one</p>
                 </div>
             </div>
         </div>
+
+
+        <form onsubmit="SignUp()">
+            <div id="sign-Up-Field">
+              <div id="escape-btn" onclick="turnoffFeild()">
+                  <i class="fa-solid fa-xmark" onclick="turnoffFeild()"></i>
+              </div>
+              <label for="name"> User Name </label>
+              <input type="name" id="Name" placeholder="User name"/>
+              <label for="email"> Email </label>
+              <input type="email" id="SignUpEmail" placeholder="Email" />
+              <label for="password"> Password </label>
+              <input type="password" id="SignUpPassword" placeholder="Password" />
+              <button class="Signup-btn" onclick="SignUp()" type="submit">Sign in</button>
+              <div class="signUpField">
+                <div class="signUpLine">
+                  <p>Already have account?</p>
+                  <p class="GoToSignUpField" onclick="signInForm()" >Back to login</p>
+                </div>
+              </div>
+            </div>
+          </form>
     <!-- </section> -->
 
 
@@ -113,7 +135,7 @@
       </div>
     </div>
   </footer>
-
+    <script src="/Button-page.js"></script>
     <script src="./add-to-fav.js"></script>
     
 </body>
