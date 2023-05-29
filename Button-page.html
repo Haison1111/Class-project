@@ -44,7 +44,7 @@
     <!-- <section class="showcase-button"> -->
       <div id="darken-element" onclick="turnoffFeild()">
     </div>
-    
+    <form onsubmit="login()">
     <div id="signInField">
       <div id="escape-btn" onclick="turnoffFeild()">
           <i class="fa-solid fa-xmark" onclick="turnoffFeild()"></i>
@@ -53,7 +53,7 @@
       <input type="email" id="Email" placeholder="Email" />
       <label for="password"> Password </label>
       <input type="password" id="Password" placeholder="Password" />
-      <button class="Login-btn" type="submit">Login</button>
+      <button class="Login-btn" type="submit" onclick="login()">Login</button>
       <div class="signUpField">
         <div class="signUpLine">
           <p>Don't have one?</p>
@@ -61,7 +61,7 @@
         </div>
       </div>
     </div>
-  
+  </form>
   
 
   

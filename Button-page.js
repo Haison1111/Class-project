@@ -39,17 +39,20 @@ if(JSON.parse(localStorage.getItem('UserProfile')) !== null ){
     UserProfile = JSON.parse(localStorage.getItem('UserProfile'))
 }
 let SignInSucess = false;
+
+
 function login(){
-    const EmailLogin = document.getElementById("SignUpEmail").value;
-    const PasswordLogin = document.getElementById("SignUpPassword").value;
-    const NameLogin = document.getElementById("Name").value;
-    let user = localStorage.getItem(NameLogin)
+    const EmailLogin = document.getElementById("Email").value ;
+    const PasswordLogin = document.getElementById("Password").value;
+    // const NameLogin = document.getElementById("Name").value;
+    let user = localStorage.getItem(EmailLogin)
     let data = JSON.parse(user)
-    if ( NameLogin == data.Name && EmailLogin == data.Email && PasswordLogin == data.Password){
-        SignInSucess = true;
+    
+    if (  EmailLogin === data.Email && PasswordLogin === data.Password){
+        // SignInSucess = true;
         alert("dang nhap thanh cong")
         window.location.href="./homepage.html"
-        // document.getElementsByClassName("signin").style.display = "none"
+        document.getElementsByClassName("signin").style.display = "none"
     } 
     if (SignInSucess = true){
         document.getElementsByClassName("signin").innerText = `xin chao ${EmailLogin}`
@@ -60,8 +63,9 @@ function SignUp(){
     const Name= document.getElementById("Name").value;
     const Email = document.getElementById("SignUpEmail").value;
     const Password = document.getElementById("SignUpPassword").value;
-    const signInBtn = document.querySelector(".signin")
+    const signInBtn = document.getElementsByClassName("signin")
     let existingEmail = false;
+    let SignUpSucess = false;
     if ( Password.length < 8) {
         alert('vui long nhap pass word du 8 ki tu');
         return;
@@ -73,7 +77,7 @@ function SignUp(){
     }
     if ( existingEmail === true){
         alert('Email đã tồn tại')
-    } else {
+    } else if(existingEmail === false) {
         alert('Đăng kí Thành Công')
         SignUpSucess = true;
         UserProfile.push({
@@ -81,10 +85,9 @@ function SignUp(){
             Email : Email,
             Password : Password,
         });
-    if (SignUpSucess = true){
-        signInBtn.innerHTML = `xin chao ${Name}`
-    }
-        localStorage.setItem(Name,JSON.stringify(UserProfile))
+        signInBtn.innerText = `xin chao ${Name}`
+    
+        localStorage.setItem(Email,JSON.stringify(UserProfile))
     }
     
 }  
