@@ -60,10 +60,11 @@ function login(){
 }
 
 function SignUp(){
+    Event.preventDefault
     const Name= document.getElementById("Name").value;
     const Email = document.getElementById("SignUpEmail").value;
     const Password = document.getElementById("SignUpPassword").value;
-    const signInBtn = document.getElementsByClassName("signin")
+    const signInBtn = document.getElementById("signin")
     let existingEmail = false;
     let SignUpSucess = false;
     if ( Password.length < 8) {
@@ -80,12 +81,13 @@ function SignUp(){
     } else if(existingEmail === false) {
         alert('Đăng kí Thành Công')
         SignUpSucess = true;
+        signInBtn.style.display = "none"
         UserProfile.push({
             Name: Name,
             Email : Email,
             Password : Password,
         });
-        signInBtn.innerText = `xin chao ${Name}`
+        
     
         localStorage.setItem(Email,JSON.stringify(UserProfile))
     }

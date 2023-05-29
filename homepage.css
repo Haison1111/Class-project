@@ -51,7 +51,7 @@ h4.logo:hover{
 button:hover{
   cursor: pointer;
 }
-button.signin{
+button#signin{
   padding: 10px 36px;
   font-size: 24px;
   border-radius: 32px;
@@ -62,7 +62,7 @@ color: white;
 font-family: 'Quicksand', sans-serif;
 transition: 1s ease-in;
 }
-button.signin:hover{
+button#signin:hover{
   cursor: pointer;
 }
 h4:hover{
