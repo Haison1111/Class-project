@@ -135,11 +135,11 @@ function mobileMenuNav(){
 
 
 
-// NavElements.forEach(NavElement => {
-//     if (NavElement.href.includes(windowPathName)){
-//         NavElement.classList.add("active")
-//     }
-// });
+NavElements.forEach(NavElement => {
+    if (NavElement.href.includes(windowPathName)){
+        NavElement.classList.add("active")
+    }
+});
 
 
 
